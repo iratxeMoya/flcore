@@ -85,14 +85,17 @@ if __name__ == "__main__":
     config["min_evaluate_clients"] = config["num_clients"]
     config["min_available_clients"] = config["num_clients"]
 
-    experiment_dir = Path(os.path.join(config["experiment"]["log_path"], config["experiment"]["name"]))
-    config["experiment_dir"] = experiment_dir
+    
+    
 
     # Create sandbox log file path
 # Originalmente estaba asi:
 #    sandbox_log_file = Path(os.path.join("./sandbox", "log_server.txt"))
     sandbox_log_file = Path(os.path.join(config["sandbox_path"], "log_server.txt"))
-
+    if not os.path.exists(config["sandbox_path"]):
+        os.makedirs(config["sandbox_path"])
+    if not os.path.isfile(sandbox_log_file):
+        open(sandbox_log_file, 'w').close()
     # Set up the file handler (writes to file)
     file_handler = logging.FileHandler(sandbox_log_file)
     file_handler.setLevel(logging.DEBUG)

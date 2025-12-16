@@ -30,8 +30,8 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, default="dt4h_format", help="Dataloader to use")
     parser.add_argument("--data_id", type=str, default="data_id.parquet" , help="Dataset ID")
     parser.add_argument("--normalization_method",type=str, default="IQR", help="Type of normalization: IQR STD MIN_MAX")
-    parser.add_argument("--train_labels", type=str, nargs='+', default=None, help="Dataloader to use")
-    parser.add_argument("--target_label", type=str, nargs='+', default=None, help="Dataloader to use")
+    parser.add_argument("--train_labels", type=str, nargs='+', default=[], help="Dataloader to use")
+    parser.add_argument("--target_label", type=str, nargs='+', default=[], help="Dataloader to use")
     parser.add_argument("--train_size", type=float, default=0.8, help="Fraction of dataset to use for training. [0,1)")
     # Variables training related
     parser.add_argument("--num_rounds", type=int, default=50, help="Number of federated iterations")
@@ -68,20 +68,24 @@ if __name__ == "__main__":
     parser.add_argument("--levelOfDetail", type=str, default="DecisionTree", help="Level of detail")
     # # Neural networks
     # params : type: "nn", "BNN" Bayesiana, otros
-   parser.add_argument("--neural_network", type=json.loads, default={"dropout_p": 0.2, "device": "cpu","local_epochs":10}, help="Neural Network parameters")
+    parser.add_argument("--neural_network", type=json.loads, default={"dropout_p": 0.2, "device": "cpu","local_epochs":10}, help="Neural Network parameters")
     parser.add_argument("--dropout_p", type=int, default=0.2, help="Montecarlo dropout rate")
     parser.add_argument("--T", type=int, default=20, help="Samples of MC dropout")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
     # # XGB
     parser.add_argument("--xgb", type=json.loads, default={"batch_size": 32,"num_iterations": 100,"task_type": "BINARY","tree_num": 500}, help="XGB parameters")
     parser.add_argument("--tree_num", type=int, default=100, help="Number of trees")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
-    parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
+    # # COX
+    parser.add_argument("--cox", type=json.loads, default={"time_col": "time","event_col": "event"}, help="COX parameters")
+    parser.add_argument('--negative_duration_strategy', type=str, default='clip', help='Strategy for handling negative durations')
+
 # *******************************************************************************************************************
 
     args = parser.parse_args()
@@ -94,10 +98,14 @@ if __name__ == "__main__":
     dir_name_parent = str(Path(config["data_id"]).parent)
 
 #    config["metadata_file"] = os.path.join(dir_name_parent,"metadata.json")
-    config["metadata_file"] = os.path.join(est,"metadata.json")
+    pattern = "*.json"
+    metadata_files = glob.glob(os.path.join(est,pattern))
+    config["metadata_file"] = metadata_files[-1]
 
     pattern = "*.parquet"
+    print(config['data_id'], est, id)
     parquet_files = glob.glob(os.path.join(est, pattern))
+    print(parquet_files, metadata_files)
     # ¿How to choose one of the list?
     config["data_file"] = parquet_files[-1]
 
@@ -145,6 +153,8 @@ Scikit-learn
 # **************************************************************************************************************
 #    parser.add_argument("--xgb", type=json.loads, default={"batch_size": 32,"num_iterations": 100,"task_type": "BINARY","tree_num": 500}, help="XGB parameters")
     elif config["model"] == "xgb":
+        pass
+    elif config["model"] == "cox":
         pass
 # **************************************************************************************************************
     # Create sandbox log file path
@@ -232,9 +242,11 @@ Scikit-learn
 #        num_client = int(sys.argv[1])
 
 num_client = 0 # config["client_id"]
-(X_train, y_train), (X_test, y_test) = datasets.load_dataset(config, num_client)
+experiment_dir = Path(os.path.join(config["experiment"]["log_path"], config["experiment"]["name"]))
+config["experiment_dir"] = experiment_dir
+(X_train, y_train), (X_test, y_test), time_col, event_col = datasets.load_dataset(config, num_client)
 
-data = (X_train, y_train), (X_test, y_test)
+data = (X_train, y_train), (X_test, y_test), time_col, event_col
 client = get_model_client(config, data, num_client)
 """
 if isinstance(client, fl.client.NumPyClient):
@@ -285,3 +297,4 @@ for attempt in range(3):
 sys.stdout.flush()
 sys.stderr.flush()
 os._exit(0)
+

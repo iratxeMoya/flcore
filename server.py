@@ -75,11 +75,7 @@ if __name__ == "__main__":
     # Copy the config file to the experiment directory
     os.system(f"cp {config_path} {experiment_dir}")
 
-    (X_train, y_train), (X_test, y_test) = datasets.load_dataset(config)
-
-    data = (X_train, y_train), (X_test, y_test)
-
-    server, strategy = get_model_server_and_strategy(config, data)
+    server, strategy = get_model_server_and_strategy(config)
 
     # Start Flower server for three rounds of federated learning
     history = fl.server.start_server(
@@ -93,7 +89,7 @@ if __name__ == "__main__":
     # filename = os.path.join( checkpoint_dir, 'final_model.pt' )
     # joblib.dump(model, filename)
     # Save the history as a yaml file
-    print(history)
+    print('IN SERVER:\n', history)
     with open(experiment_dir / "metrics.txt", "w") as f:
         f.write(f"Results of the experiment {config['experiment']['name']}\n")
         f.write(f"Model: {config['model']}\n")
@@ -104,7 +100,10 @@ if __name__ == "__main__":
         selection_metric = config['checkpoint_selection_metric']
         # Get index of tuple of the best round
         best_round = int(numpy.argmax([round[1] for round in history.metrics_distributed[selection_metric]]))
-        training_time = history.metrics_distributed_fit['training_time [s]'][-1][1]
+        if 'training_time [s]' in history.metrics_distributed_fit:
+            training_time = history.metrics_distributed_fit['training_time [s]'][-1][1]
+        else:
+            training_time = 0.0
         f.write(f"Total training time: {training_time:.2f} [s] \n")
         f.write(f"Best checkpoint based on {selection_metric} after round: {best_round}\n\n")
         print(f"Best checkpoint based on {selection_metric} after round: {best_round}\n\n")

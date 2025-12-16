@@ -1,0 +1,89 @@
+2025-12-11 14:39:48,910 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 14:39:48,910 - root - DEBUG - Starting Flower server...
+2025-12-11 14:39:48,910 - STDOUT - INFO - ELSE
+2025-12-11 14:39:48,915 - flwr - WARNING - 
+Setting `min_available_clients` lower than `min_fit_clients` or
+`min_evaluate_clients` can cause the server to fail when there are too few clients
+connected to the server. `min_available_clients` must be set to a value larger
+than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
+
+2025-12-11 14:39:48,916 - flwr - INFO - Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+2025-12-11 14:39:48,923 - flwr - INFO - Flower ECE: gRPC server running (5 rounds), SSL is disabled
+2025-12-11 14:39:48,924 - flwr - INFO - Initializing global parameters
+2025-12-11 14:39:48,924 - flwr - INFO - Requesting initial parameters from one random client
+2025-12-11 15:05:44,250 - flwr - INFO - Received initial parameters from one random client
+2025-12-11 15:05:44,251 - flwr - INFO - Evaluating initial parameters
+2025-12-11 15:05:44,251 - flwr - INFO - FL starting
+2025-12-11 15:05:44,252 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,252 - flwr - INFO - fit_round 1: no clients selected, cancel
+2025-12-11 15:05:44,254 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,254 - flwr - INFO - evaluate_round 1: no clients selected, cancel
+2025-12-11 15:05:44,254 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,254 - flwr - INFO - fit_round 2: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - evaluate_round 2: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - fit_round 3: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - evaluate_round 3: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - fit_round 4: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - evaluate_round 4: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - fit_round 5: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2025-12-11 15:05:44,255 - flwr - INFO - evaluate_round 5: no clients selected, cancel
+2025-12-11 15:05:44,255 - flwr - INFO - FL finished in 0.003705957002239302
+2025-12-11 15:05:44,256 - flwr - INFO - app_fit: losses_distributed []
+2025-12-11 15:05:44,256 - flwr - INFO - app_fit: metrics_distributed_fit {}
+2025-12-11 15:05:44,256 - flwr - INFO - app_fit: metrics_distributed {}
+2025-12-11 15:05:44,257 - flwr - INFO - app_fit: losses_centralized []
+2025-12-11 15:05:44,257 - flwr - INFO - app_fit: metrics_centralized {}
+2025-12-11 15:06:24,199 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:06:24,199 - root - DEBUG - Starting Flower server...
+2025-12-11 15:06:24,199 - STDOUT - INFO - ELSE
+2025-12-11 15:06:24,205 - flwr - INFO - Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+2025-12-11 15:06:24,213 - flwr - INFO - Flower ECE: gRPC server running (5 rounds), SSL is disabled
+2025-12-11 15:06:24,213 - flwr - INFO - Initializing global parameters
+2025-12-11 15:06:24,213 - flwr - INFO - Requesting initial parameters from one random client
+2025-12-11 15:06:32,568 - flwr - INFO - Received initial parameters from one random client
+2025-12-11 15:06:32,568 - flwr - INFO - Evaluating initial parameters
+2025-12-11 15:06:32,568 - flwr - INFO - FL starting
+2025-12-11 15:06:56,092 - flwr - DEBUG - fit_round 1: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,103 - flwr - DEBUG - fit_round 1 received 2 results and 0 failures
+2025-12-11 15:06:56,104 - flwr - DEBUG - evaluate_round 1: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,107 - flwr - DEBUG - evaluate_round 1 received 2 results and 0 failures
+2025-12-11 15:06:56,108 - flwr - DEBUG - fit_round 2: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,117 - flwr - DEBUG - fit_round 2 received 2 results and 0 failures
+2025-12-11 15:06:56,117 - flwr - DEBUG - evaluate_round 2: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,121 - flwr - DEBUG - evaluate_round 2 received 2 results and 0 failures
+2025-12-11 15:06:56,121 - flwr - DEBUG - fit_round 3: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,130 - flwr - DEBUG - fit_round 3 received 2 results and 0 failures
+2025-12-11 15:06:56,130 - flwr - DEBUG - evaluate_round 3: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,133 - flwr - DEBUG - evaluate_round 3 received 2 results and 0 failures
+2025-12-11 15:06:56,133 - flwr - DEBUG - fit_round 4: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,141 - flwr - DEBUG - fit_round 4 received 2 results and 0 failures
+2025-12-11 15:06:56,142 - flwr - DEBUG - evaluate_round 4: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,145 - flwr - DEBUG - evaluate_round 4 received 2 results and 0 failures
+2025-12-11 15:06:56,145 - flwr - DEBUG - fit_round 5: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,152 - flwr - DEBUG - fit_round 5 received 2 results and 0 failures
+2025-12-11 15:06:56,153 - STDOUT - INFO - [array([ 0.34349944, -0.54285409, -0.29968691,  0.12747405,  0.30216652])]
+2025-12-11 15:06:56,153 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,153 - STDOUT - INFO -     Snippet: [ 0.34349944 -0.54285409 -0.29968691]
+2025-12-11 15:06:56,154 - flwr - DEBUG - evaluate_round 5: strategy sampled 2 clients (out of 2)
+2025-12-11 15:06:56,157 - flwr - DEBUG - evaluate_round 5 received 2 results and 0 failures
+2025-12-11 15:06:56,157 - flwr - INFO - FL finished in 23.58914890899905
+2025-12-11 15:06:56,157 - flwr - INFO - app_fit: losses_distributed [(1, 0.39779530465602875), (2, 0.3980051577091217), (3, 0.4030412286520004), (4, 0.4040764272212982), (5, 0.4030412286520004)]
+2025-12-11 15:06:56,157 - flwr - INFO - app_fit: metrics_distributed_fit {}
+2025-12-11 15:06:56,157 - flwr - INFO - app_fit: metrics_distributed {'BIC': [(1, 159.02901280756345), (2, 159.2362333880534), (3, 159.25215804767333), (4, 159.26936044419972), (5, 159.27463572677703)], 'c_index': [(1, 0.602204689161211), (2, 0.601994851994852), (3, 0.5969587600022382), (4, 0.5959235633148676), (5, 0.5969587600022382)], 'neg_log_likelihood': [(1, 70.2923077684969), (2, 70.39591805874187), (3, 70.40388038855181), (4, 70.41248158681503), (5, 70.41511922810366)], 'AIC': [(1, 150.5846155369938), (2, 150.79183611748374), (3, 150.80776077710362), (4, 150.82496317363007), (5, 150.83023845620733)], 'mean_risk_score': [(1, 0.06548711330372964), (2, 0.06821313271546495), (3, 0.06926295856623446), (4, 0.06983116545332277), (5, 0.07001796781173626)], 'permissible_pairs': [(1, 500.5), (2, 500.5), (3, 500.5), (4, 500.5), (5, 500.5)], 'event_rate': [(1, 0.6375), (2, 0.6375), (3, 0.6375), (4, 0.6375), (5, 0.6375)]}
+2025-12-11 15:06:56,157 - flwr - INFO - app_fit: losses_centralized []
+2025-12-11 15:06:56,157 - flwr - INFO - app_fit: metrics_centralized {}
+2025-12-11 15:06:56,158 - STDOUT - INFO - History (loss, distributed):
+2025-12-11 15:06:56,158 - STDOUT - INFO - 	round 1: 0.39779530465602875
+2025-12-11 15:06:56,159 - STDOUT - INFO - 	round 2: 0.3980051577091217
+2025-12-11 15:06:56,159 - STDOUT - INFO - 	round 3: 0.4030412286520004
+2025-12-11 15:06:56,159 - STDOUT - INFO - 	round 4: 0.4040764272212982
+2025-12-11 15:06:56,159 - STDOUT - INFO - 	round 5: 0.4030412286520004
+2025-12-11 15:06:56,159 - STDOUT - INFO - History (metrics, distributed, evaluate):
+2025-12-11 15:06:56,160 - STDOUT - INFO - {'BIC': [(1, 159.02901280756345), (2, 159.2362333880534), (3, 159.25215804767333), (4, 159.26936044419972), (5, 159.27463572677703)], 'c_index': [(1, 0.602204689161211), (2, 0.601994851994852), (3, 0.5969587600022382), (4, 0.5959235633148676), (5, 0.5969587600022382)], 'neg_log_likelihood': [(1, 70.2923077684969), (2, 70.39591805874187), (3, 70.40388038855181), (4, 70.41248158681503), (5, 70.41511922810366)], 'AIC': [(1, 150.5846155369938), (2, 150.79183611748374), (3, 150.80776077710362), (4, 150.82496317363007), (5, 150.83023845620733)], 'mean_risk_score': [(1, 0.06548711330372964), (2, 0.06821313271546495), (3, 0.06926295856623446), (4, 0.06983116545332277), (5, 0.07001796781173626)], 'permissible_pairs': [(1, 500.5), (2, 500.5), (3, 500.5), (4, 500.5), (5, 500.5)], 'event_rate': [(1, 0.6375), (2, 0.6375), (3, 0.6375), (4, 0.6375), (5, 0.6375)]}

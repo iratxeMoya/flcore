@@ -40,9 +40,14 @@ if __name__ == "__main__":
 
     print("Client id:" + str(num_client))
 
-(X_train, y_train), (X_test, y_test) = datasets.load_dataset(config, num_client)
+(X_train, y_train), (X_test, y_test), time, event = datasets.load_dataset(config, num_client)
 
-data = (X_train, y_train), (X_test, y_test)
+data = (X_train, y_train), (X_test, y_test), time, event
+
+# Create experiment directory
+experiment_dir = Path(os.path.join(config["experiment"]["log_path"], config["experiment"]["name"]))
+experiment_dir.mkdir(parents=True, exist_ok=True)
+config["experiment_dir"] = experiment_dir
 
 client = get_model_client(config, data, num_client)
 

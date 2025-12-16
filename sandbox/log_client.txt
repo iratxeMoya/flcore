@@ -1,0 +1,313 @@
+2025-12-11 15:02:34,887 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:02:34,887 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:02:34,919 - STDERR - ERROR - Traceback (most recent call last):
+2025-12-11 15:02:34,919 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 245, in <module>
+2025-12-11 15:02:34,919 - STDERR - ERROR - (X_train, y_train), (X_test, y_test) = datasets.load_dataset(config, num_client)
+2025-12-11 15:02:34,919 - STDERR - ERROR - ValueError
+2025-12-11 15:02:34,920 - STDERR - ERROR - :
+2025-12-11 15:02:34,920 - STDERR - ERROR - too many values to unpack (expected 2)
+2025-12-11 15:04:44,455 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:04:44,455 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:04:44,476 - STDERR - ERROR - Traceback (most recent call last):
+2025-12-11 15:04:44,476 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 248, in <module>
+2025-12-11 15:04:44,476 - STDERR - ERROR - client = get_model_client(config, data, num_client)
+2025-12-11 15:04:44,476 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/client_selector.py", line 29, in get_model_client
+2025-12-11 15:04:44,476 - STDERR - ERROR - client = cox.client.get_client(config, data, client_id)
+2025-12-11 15:04:44,476 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/cox/client.py", line 81, in get_client
+2025-12-11 15:04:44,477 - STDERR - ERROR - return FLClient(local_data, client_id=client_id, saving_path=config["experiment_dir"])
+2025-12-11 15:04:44,477 - STDERR - ERROR - KeyError
+2025-12-11 15:04:44,477 - STDERR - ERROR - :
+2025-12-11 15:04:44,477 - STDERR - ERROR - 'experiment_dir'
+2025-12-11 15:05:44,203 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:05:44,203 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:05:44,232 - flwr - INFO - Opened insecure gRPC connection (no certificates were passed)
+2025-12-11 15:05:44,233 - flwr - DEBUG - ChannelConnectivity.IDLE
+2025-12-11 15:05:44,234 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2025-12-11 15:05:44,235 - flwr - DEBUG - ChannelConnectivity.READY
+2025-12-11 15:05:44,259 - flwr - DEBUG - gRPC channel closed
+2025-12-11 15:05:44,259 - flwr - INFO - Disconnect and shut down
+2025-12-11 15:06:32,540 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:06:32,541 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:06:32,565 - flwr - INFO - Opened insecure gRPC connection (no certificates were passed)
+2025-12-11 15:06:32,566 - flwr - DEBUG - ChannelConnectivity.IDLE
+2025-12-11 15:06:32,566 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2025-12-11 15:06:32,567 - flwr - DEBUG - ChannelConnectivity.READY
+2025-12-11 15:06:56,061 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:06:56,061 - root - DEBUG - This will be logged to both the console and the file.
+2025-12-11 15:06:56,090 - flwr - INFO - Opened insecure gRPC connection (no certificates were passed)
+2025-12-11 15:06:56,091 - flwr - DEBUG - ChannelConnectivity.IDLE
+2025-12-11 15:06:56,092 - flwr - DEBUG - ChannelConnectivity.READY
+2025-12-11 15:06:56,093 - STDOUT - INFO - [Client] Initialized model type from server: cox
+2025-12-11 15:06:56,093 - STDOUT - INFO - [Client] Initialized model type from server: cox
+2025-12-11 15:06:56,093 - STDOUT - INFO - [CoxPHModel] FIT: Initializing with 5 features (zeros).
+2025-12-11 15:06:56,093 - STDOUT - INFO - [CoxPHModel] FIT: Initializing with 5 features (zeros).
+2025-12-11 15:06:56,093 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,093 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,093 - STDOUT - INFO -     Initial beta snippet: [0. 0. 0.]
+2025-12-11 15:06:56,093 - STDOUT - INFO -     Initial beta snippet: [0. 0. 0.]
+2025-12-11 15:06:56,100 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,100 - STDOUT - INFO -          Current function value: 375.573638
+2025-12-11 15:06:56,100 - STDOUT - INFO -          Iterations: 2
+2025-12-11 15:06:56,100 - STDOUT - INFO -          Function evaluations: 3
+2025-12-11 15:06:56,100 - STDOUT - INFO -          Gradient evaluations: 3
+2025-12-11 15:06:56,100 - STDOUT - INFO -          Hessian evaluations: 2
+2025-12-11 15:06:56,100 - STDOUT - INFO - 
+2025-12-11 15:06:56,100 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,100 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,100 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,100 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,100 - STDOUT - INFO - Actual Iterations: 2
+2025-12-11 15:06:56,101 - STDOUT - INFO - Final NLL: 375.573638
+2025-12-11 15:06:56,101 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,101 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,101 - STDOUT - INFO -     Final beta snippet: [ 0.30332444 -0.53931121 -0.22594283]
+2025-12-11 15:06:56,101 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,101 - STDOUT - INFO -     Snippet: [ 0.30332444 -0.53931121 -0.22594283]
+2025-12-11 15:06:56,101 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,102 - STDOUT - INFO -          Current function value: 386.262262
+2025-12-11 15:06:56,102 - STDOUT - INFO -          Iterations: 2
+2025-12-11 15:06:56,102 - STDOUT - INFO -          Function evaluations: 3
+2025-12-11 15:06:56,102 - STDOUT - INFO -          Gradient evaluations: 3
+2025-12-11 15:06:56,102 - STDOUT - INFO -          Hessian evaluations: 2
+2025-12-11 15:06:56,102 - STDOUT - INFO - 
+2025-12-11 15:06:56,102 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,102 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,102 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,102 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,102 - STDOUT - INFO - Actual Iterations: 2
+2025-12-11 15:06:56,102 - STDOUT - INFO - Final NLL: 386.262262
+2025-12-11 15:06:56,102 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,102 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,102 - STDOUT - INFO -     Final beta snippet: [ 0.3405342  -0.55809305 -0.3313918 ]
+2025-12-11 15:06:56,102 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,102 - STDOUT - INFO -     Snippet: [ 0.3405342  -0.55809305 -0.3313918 ]
+2025-12-11 15:06:56,105 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,105 - STDOUT - INFO -     Snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,105 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,105 - STDOUT - INFO -     Snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,106 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6252587991718427, 'permissible_pairs': 483.0, 'neg_log_likelihood': 65.25024453136312, 'AIC': 140.50048906272625, 'BIC': 148.94488633329593, 'event_rate': 0.6, 'mean_risk_score': -0.11551867304501647}
+2025-12-11 15:06:56,106 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.5791505791505791, 'permissible_pairs': 518.0, 'neg_log_likelihood': 75.33437100563066, 'AIC': 160.66874201126132, 'BIC': 169.113139281831, 'event_rate': 0.675, 'mean_risk_score': 0.24649289965247573}
+2025-12-11 15:06:56,106 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,106 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,106 - STDOUT - INFO -     Snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,106 - STDOUT - INFO -     Snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,109 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,109 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,109 - STDOUT - INFO -     Snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,109 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,109 - STDOUT - INFO -     Snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,109 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,109 - STDOUT - INFO -     Initial beta snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,109 - STDOUT - INFO -     Initial beta snippet: [ 0.32192932 -0.54870213 -0.27866731]
+2025-12-11 15:06:56,115 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Current function value: 386.209777
+2025-12-11 15:06:56,115 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Current function value: 375.503862
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,115 - STDOUT - INFO - 
+2025-12-11 15:06:56,115 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,115 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,116 - STDOUT - INFO - 
+2025-12-11 15:06:56,116 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,116 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,116 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,116 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,116 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,116 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,116 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,116 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,116 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,116 - STDOUT - INFO - Final NLL: 386.209777
+2025-12-11 15:06:56,116 - STDOUT - INFO - Final NLL: 375.503862
+2025-12-11 15:06:56,116 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,116 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,116 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,116 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,116 - STDOUT - INFO -     Final beta snippet: [ 0.34608352 -0.538716   -0.35806097]
+2025-12-11 15:06:56,116 - STDOUT - INFO -     Final beta snippet: [ 0.33127198 -0.538071   -0.23552665]
+2025-12-11 15:06:56,116 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,116 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,116 - STDOUT - INFO -     Snippet: [ 0.33127198 -0.538071   -0.23552665]
+2025-12-11 15:06:56,116 - STDOUT - INFO -     Snippet: [ 0.34608352 -0.538716   -0.35806097]
+2025-12-11 15:06:56,118 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,118 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,118 - STDOUT - INFO -     Snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,118 - STDOUT - INFO -     Snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,119 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6190476190476191, 'permissible_pairs': 483.0, 'neg_log_likelihood': 65.37074577105832, 'AIC': 140.74149154211665, 'BIC': 149.18588881268633, 'event_rate': 0.6, 'mean_risk_score': -0.11384714221007353}
+2025-12-11 15:06:56,119 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.584942084942085, 'permissible_pairs': 518.0, 'neg_log_likelihood': 75.4210903464254, 'AIC': 160.8421806928508, 'BIC': 169.28657796342048, 'event_rate': 0.675, 'mean_risk_score': 0.2502734076410034}
+2025-12-11 15:06:56,119 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,119 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,120 - STDOUT - INFO -     Snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,120 - STDOUT - INFO -     Snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,122 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,122 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,122 - STDOUT - INFO -     Snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,122 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,122 - STDOUT - INFO -     Snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,122 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,122 - STDOUT - INFO -     Initial beta snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,122 - STDOUT - INFO -     Initial beta snippet: [ 0.33867775 -0.5383935  -0.29679381]
+2025-12-11 15:06:56,127 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,127 - STDOUT - INFO -          Current function value: 386.197817
+2025-12-11 15:06:56,127 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,127 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,127 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,127 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,127 - STDOUT - INFO - 
+2025-12-11 15:06:56,127 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,127 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,127 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,127 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,127 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,127 - STDOUT - INFO - Final NLL: 386.197817
+2025-12-11 15:06:56,127 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,127 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,127 - STDOUT - INFO -     Final beta snippet: [ 0.35108356 -0.54257487 -0.36121235]
+2025-12-11 15:06:56,127 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,128 - STDOUT - INFO -     Snippet: [ 0.35108356 -0.54257487 -0.36121235]
+2025-12-11 15:06:56,128 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,129 - STDOUT - INFO -          Current function value: 375.501645
+2025-12-11 15:06:56,129 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,129 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,129 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,129 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,129 - STDOUT - INFO - 
+2025-12-11 15:06:56,129 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,129 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,129 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,129 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,129 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,129 - STDOUT - INFO - Final NLL: 375.501645
+2025-12-11 15:06:56,129 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,129 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,129 - STDOUT - INFO -     Final beta snippet: [ 0.33000537 -0.54240824 -0.23770709]
+2025-12-11 15:06:56,129 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,129 - STDOUT - INFO -     Snippet: [ 0.33000537 -0.54240824 -0.23770709]
+2025-12-11 15:06:56,131 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,131 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,131 - STDOUT - INFO -     Snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,131 - STDOUT - INFO -     Snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,132 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.581081081081081, 'permissible_pairs': 518.0, 'neg_log_likelihood': 75.42582044704781, 'AIC': 160.85164089409562, 'BIC': 169.2960381646653, 'event_rate': 0.675, 'mean_risk_score': 0.25058386461952215}
+2025-12-11 15:06:56,132 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,132 - STDOUT - INFO -     Snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,132 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6128364389233955, 'permissible_pairs': 483.0, 'neg_log_likelihood': 65.38194033005583, 'AIC': 140.76388066011165, 'BIC': 149.20827793068133, 'event_rate': 0.6, 'mean_risk_score': -0.11205794748705322}
+2025-12-11 15:06:56,132 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,132 - STDOUT - INFO -     Snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,134 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,134 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,134 - STDOUT - INFO -     Snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,135 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,135 - STDOUT - INFO -     Snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,135 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,135 - STDOUT - INFO -     Initial beta snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,135 - STDOUT - INFO -     Initial beta snippet: [ 0.34054447 -0.54249156 -0.29945972]
+2025-12-11 15:06:56,139 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,139 - STDOUT - INFO -          Current function value: 386.196037
+2025-12-11 15:06:56,139 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,140 - STDOUT - INFO - 
+2025-12-11 15:06:56,140 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,140 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Current function value: 375.501808
+2025-12-11 15:06:56,140 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,140 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,140 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,140 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,140 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,140 - STDOUT - INFO - 
+2025-12-11 15:06:56,140 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,140 - STDOUT - INFO - Final NLL: 386.196037
+2025-12-11 15:06:56,140 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,140 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,140 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,140 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,140 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,140 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,140 - STDOUT - INFO - Final NLL: 375.501808
+2025-12-11 15:06:56,140 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,140 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,140 - STDOUT - INFO -     Final beta snippet: [ 0.35408289 -0.5420291  -0.36099252]
+2025-12-11 15:06:56,140 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,140 - STDOUT - INFO -     Final beta snippet: [ 0.33196968 -0.54267424 -0.23795731]
+2025-12-11 15:06:56,140 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,140 - STDOUT - INFO -     Snippet: [ 0.35408289 -0.5420291  -0.36099252]
+2025-12-11 15:06:56,140 - STDOUT - INFO -     Snippet: [ 0.33196968 -0.54267424 -0.23795731]
+2025-12-11 15:06:56,142 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,143 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,143 - STDOUT - INFO -     Snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,143 - STDOUT - INFO -     Snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,143 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6107660455486542, 'permissible_pairs': 483.0, 'neg_log_likelihood': 65.37692746314364, 'AIC': 140.7538549262873, 'BIC': 149.19825219685697, 'event_rate': 0.6, 'mean_risk_score': -0.11143026026924001}
+2025-12-11 15:06:56,143 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,144 - STDOUT - INFO -     Snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,144 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.581081081081081, 'permissible_pairs': 518.0, 'neg_log_likelihood': 75.44803571048641, 'AIC': 160.89607142097282, 'BIC': 169.3404686915425, 'event_rate': 0.675, 'mean_risk_score': 0.25109259117588556}
+2025-12-11 15:06:56,144 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,144 - STDOUT - INFO -     Snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,146 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,146 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,146 - STDOUT - INFO -     Snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,146 - STDOUT - INFO -     Snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,146 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,146 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2025-12-11 15:06:56,146 - STDOUT - INFO -     Initial beta snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,146 - STDOUT - INFO -     Initial beta snippet: [ 0.34302628 -0.54235167 -0.29947492]
+2025-12-11 15:06:56,151 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Current function value: 375.502080
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,151 - STDOUT - INFO - Optimization terminated successfully.
+2025-12-11 15:06:56,151 - STDOUT - INFO - 
+2025-12-11 15:06:56,151 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Current function value: 386.195242
+2025-12-11 15:06:56,151 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Iterations: 1
+2025-12-11 15:06:56,151 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Function evaluations: 2
+2025-12-11 15:06:56,151 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Gradient evaluations: 2
+2025-12-11 15:06:56,151 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,151 - STDOUT - INFO -          Hessian evaluations: 1
+2025-12-11 15:06:56,151 - STDOUT - INFO - Final NLL: 375.502080
+2025-12-11 15:06:56,151 - STDOUT - INFO - 
+2025-12-11 15:06:56,151 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,151 - STDOUT - INFO - --- Optimizer Result ---
+2025-12-11 15:06:56,151 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,151 - STDOUT - INFO - Success: True
+2025-12-11 15:06:56,151 - STDOUT - INFO - Status: 0
+2025-12-11 15:06:56,151 - STDOUT - INFO - Message: Optimization terminated successfully.
+2025-12-11 15:06:56,151 - STDOUT - INFO - Actual Iterations: 1
+2025-12-11 15:06:56,151 - STDOUT - INFO -     Final beta snippet: [ 0.33202017 -0.54330887 -0.23820291]
+2025-12-11 15:06:56,151 - STDOUT - INFO - Final NLL: 386.195242
+2025-12-11 15:06:56,152 - STDOUT - INFO - ------------------------
+2025-12-11 15:06:56,152 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,152 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2025-12-11 15:06:56,152 - STDOUT - INFO -     Snippet: [ 0.33202017 -0.54330887 -0.23820291]
+2025-12-11 15:06:56,152 - STDOUT - INFO -     Final beta snippet: [ 0.35497872 -0.54239931 -0.3611709 ]
+2025-12-11 15:06:56,152 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,152 - STDOUT - INFO -     Snippet: [ 0.35497872 -0.54239931 -0.3611709 ]
+2025-12-11 15:06:56,154 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,154 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2025-12-11 15:06:56,154 - STDOUT - INFO -     Snippet: [ 0.34349944 -0.54285409 -0.29968691]
+2025-12-11 15:06:56,155 - STDOUT - INFO -     Snippet: [ 0.34349944 -0.54285409 -0.29968691]
+2025-12-11 15:06:56,155 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.581081081081081, 'permissible_pairs': 518.0, 'neg_log_likelihood': 75.45264233720278, 'AIC': 160.90528467440555, 'BIC': 169.34968194497523, 'event_rate': 0.675, 'mean_risk_score': 0.2512170081825397}
+2025-12-11 15:06:56,155 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,155 - STDOUT - INFO -     Snippet: [ 0.34349944 -0.54285409 -0.29968691]
+2025-12-11 15:06:56,155 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6128364389233955, 'permissible_pairs': 483.0, 'neg_log_likelihood': 65.37759611900456, 'AIC': 140.75519223800913, 'BIC': 149.1995895085788, 'event_rate': 0.6, 'mean_risk_score': -0.1111810725590672}
+2025-12-11 15:06:56,156 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2025-12-11 15:06:56,156 - STDOUT - INFO -     Snippet: [ 0.34349944 -0.54285409 -0.29968691]
+2025-12-11 15:06:56,158 - flwr - DEBUG - gRPC channel closed
+2025-12-11 15:06:56,158 - flwr - DEBUG - gRPC channel closed
+2025-12-11 15:06:56,158 - flwr - INFO - Disconnect and shut down
+2025-12-11 15:06:56,158 - flwr - INFO - Disconnect and shut down

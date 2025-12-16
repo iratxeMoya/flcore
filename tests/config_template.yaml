@@ -1,0 +1,33 @@
+# GENERAL
+production_mode: false
+verbose: false
+local_port: 8081
+
+# EXPERIMENT
+experiment:
+  name: experiment_surv_1
+  log_path: logs
+  debug: true
+
+# DATASET
+dataset: survival
+smooth_method: None
+dropout_method: None
+train_size: 0.7
+normalization_method : IQR
+negative_duration_strategy: clip
+data_path: dataset/dummy/
+metadata_file: dataset/dummy/dummy_metadata_dt4h.json
+data_file : dataset/dummy/dummy_dataset.parquet
+cox:
+  time_col: time
+  event_col: event
+
+# MODEL
+model: cox
+num_clients: 2
+num_rounds: 5
+
+# CHECKPOINT
+checkpoint_selection_metric: AIC
+

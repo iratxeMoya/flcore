@@ -1,0 +1,36 @@
+{
+    "entity": {
+        "features": [
+            {
+                "name": "X1",
+                "dataType": "NUMERIC"
+            },
+            {
+                "name": "X2",
+                "dataType": "NUMERIC"
+            },
+            {
+                "name": "X3",
+                "dataType": "NUMERIC"
+            },
+            {
+                "name": "X4",
+                "dataType": "NUMERIC"
+            },
+            {
+                "name": "X5",
+                "dataType": "NUMERIC"
+            }
+        ],
+        "outcomes": [
+            {
+                "name": "time",
+                "dataType": "NUMERIC"
+            },
+            {
+                "name": "event",
+                "dataType": "BOOLEAN"
+            }
+        ]
+    }
+}
