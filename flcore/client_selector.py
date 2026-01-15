@@ -6,6 +6,7 @@ import flcore.models.random_forest as random_forest
 import flcore.models.weighted_random_forest as weighted_random_forest
 import flcore.models.nn as nn
 import flcore.models.cox as cox
+import flcore.models.rsf as rsf
 
 def get_model_client(config, data, client_id):
     model = config["model"]
@@ -27,6 +28,9 @@ def get_model_client(config, data, client_id):
     
     elif model == "cox":
         client = cox.client.get_client(config, data, client_id)
+
+    elif model == "rsf":
+        client = rsf.client.get_client(config, data, client_id)
 
     else:
         raise ValueError(f"Unknown model: {model}")

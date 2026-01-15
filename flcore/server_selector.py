@@ -6,6 +6,7 @@ import flcore.models.linear_models.server as linear_models_server
 import flcore.models.weighted_random_forest.server as weighted_random_forest_server
 import flcore.models.nn.server as nn_server
 import flcore.models.cox.server as cox_server
+import flcore.models.rsf.server as rsf_server
 
 def get_model_server_and_strategy(config):
     model = config["model"]
@@ -22,6 +23,8 @@ def get_model_server_and_strategy(config):
         server, strategy = nn_server.get_server_and_strategy(config)
     elif model == "cox":
         server, strategy = cox_server.get_server_and_strategy(config)
+    elif model == "rsf":
+        server, strategy = rsf_server.get_server_and_strategy(config)
     else:
         raise ValueError(f"Unknown model: {model}")
 

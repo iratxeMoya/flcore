@@ -53,7 +53,8 @@ if __name__ == "__main__":
     parser.add_argument("--checkpoint_selection_metric", type=str, default="precision", help="Metric used for checkpoints")
     parser.add_argument("--production_mode", type=str, default="True",  help="Production mode")
     parser.add_argument("--neural_network", type=json.loads, default={"dropout_p": 0.2, "device": "cpu","local_epochs":100}, help="Neural Network parameters")
-
+    parser.add_argument("--n_estimators", type=int, default=100, help="Number of estimators")
+    
     #parser.add_argument("--Wdata_path", type=str, default=None, help="Data path")
     parser.add_argument("--local_port", type=int, default=8081, help="Local port")
     parser.add_argument("--experiment", type=json.loads, default={"name": "experiment_1", "log_path": "logs", "debug": "true"}, help="experiment logs")
