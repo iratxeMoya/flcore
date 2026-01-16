@@ -25,11 +25,12 @@ logger = logging.getLogger(__name__)
 # -------------------------------
 
 class CustomStrategy(fl.server.strategy.FedAvg):
-    def __init__(self, rounds: int, saving_path :str = '/sandbox/', **kwargs):
+    def __init__(self, l1_penalty: float, rounds: int, saving_path :str = '/sandbox/', **kwargs):
         super().__init__(**kwargs)
         self.rounds = rounds
         self.results_history = {}
         self.saving_path = saving_path
+        self.l1_penalty = l1_penalty
 
     def _save_results_history(self):
         """Save the results history to a file."""
@@ -128,9 +129,9 @@ class CustomStrategy(fl.server.strategy.FedAvg):
 # Fit config function
 # -------------------------------
 
-def get_fit_config_fn():
+def get_fit_config_fn(l1_penalty: float = 0.0):
     def fit_config(rnd: int):
-        conf = {"model_type": 'cox'}
+        conf = {"model_type": 'cox', "l1_penalty": l1_penalty}
         return conf
     return fit_config
 
@@ -146,10 +147,11 @@ def get_server_and_strategy(
 
     server = fl.server.Server
     strategy = CustomStrategy(
-        on_fit_config_fn=get_fit_config_fn(),
+        on_fit_config_fn=get_fit_config_fn(config['l1_penalty']),
         rounds = config['num_rounds'],
         min_available_clients=config['num_clients'],
         saving_path=config['experiment_dir'],
+        l1_penalty=config['l1_penalty']
     )
 
     return None, strategy

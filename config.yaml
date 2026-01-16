@@ -11,11 +11,12 @@ experiment:
 experiment_dir: !!python/object/apply:pathlib.PosixPath
 - logs
 - experiment_rsf
+l1_penalty: 0.0
 local_port: 8081
 metrics_aggregation: weighted_average
-min_available_clients: 1
-min_evaluate_clients: 1
-min_fit_clients: 1
+min_available_clients: 2
+min_evaluate_clients: 2
+min_fit_clients: 2
 model: rsf
 n_estimators: 100
 n_features: 0
@@ -23,7 +24,7 @@ neural_network:
   device: cpu
   dropout_p: 0.2
   local_epochs: 100
-num_clients: 1
+num_clients: 2
 num_rounds: 3
 production_mode: 'False'
 random_forest:

@@ -1,5 +1,3 @@
-# client/models/coxph_scratch.py
-
 import numpy as np
 from scipy.optimize import minimize
 from typing import List, Dict, Optional, Tuple
@@ -11,13 +9,28 @@ class CoxPHModel(BaseSurvivalModel):
     Newton-Raphson optimization (via SciPy) of the partial log-likelihood.
     
     The max_iter is intentionally kept low (e.g., 5) to force partial updates.
+    Supports L1 (Lasso) regularization.
     """
     
-    def __init__(self, max_iter: int = 5, tol: float = 1e-1, verbose: bool = True):
-        # Setting verbose=True by default for debugging, but it can be changed to False
+    def __init__(self, max_iter: int = 5, tol: float = 1e-1, verbose: bool = True, 
+                 l1_penalty: float = 0.0):
+        """
+        Parameters:
+        -----------
+        max_iter : int
+            Maximum number of optimization iterations per fit call
+        tol : float
+            Tolerance for optimization convergence
+        verbose : bool
+            Flag to control print statements
+        l1_penalty : float
+            L1 regularization strength (lambda). Default 0.0 means no regularization.
+            Higher values increase regularization strength.
+        """
         self.max_iter = max_iter  
         self.tol = tol           
-        self.verbose = verbose # Flag to control print statements
+        self.verbose = verbose
+        self.l1_penalty = l1_penalty
         
         self.beta: Optional[np.ndarray] = None
 
@@ -27,12 +40,20 @@ class CoxPHModel(BaseSurvivalModel):
                                time: np.ndarray, 
                                event: np.ndarray
                               ) -> Tuple[float, np.ndarray, np.ndarray]:
-        # ... (Implementation of NLL, Gradient, and Hessian remains the same) ...
+        """
+        Computes negative log-likelihood, gradient, and Hessian with L1 regularization.
+        
+        Note: L1 penalty is not differentiable at 0, so we use a smooth approximation
+        for the gradient. The Hessian doesn't include L1 term as it would be 0 everywhere
+        except at beta=0 where it's undefined.
+        """
         n_samples, n_features = X.shape
         sort_idx = np.argsort(time)
         X_sorted, event_sorted = X[sort_idx], event[sort_idx]
         eta = X_sorted @ beta
         exp_eta = np.exp(eta)
+        
+        # Base negative log-likelihood
         nll = 0.0
         grad = np.zeros(n_features)
         hess = np.zeros((n_features, n_features))
@@ -54,6 +75,18 @@ class CoxPHModel(BaseSurvivalModel):
                 grad -= (X_i - E1)
                 E2 = S2 / S0
                 hess += (E2 - np.outer(E1, E1))
+        
+        # Add L1 regularization
+        if self.l1_penalty > 0:
+            # L1 penalty term: lambda * ||beta||_1
+            nll += self.l1_penalty * np.sum(np.abs(beta))
+            
+            # Gradient of L1: lambda * sign(beta)
+            # Using smooth approximation to avoid issues at beta=0
+            epsilon = 1e-8
+            grad += self.l1_penalty * (beta / (np.abs(beta) + epsilon))
+            
+            # Hessian doesn't change (L1 second derivative is 0 almost everywhere)
                 
         return nll, grad, hess
 
@@ -74,7 +107,6 @@ class CoxPHModel(BaseSurvivalModel):
         
         if self.verbose:
             print(f"[CoxPHModel] GET_PARAMS: Returning beta (shape {self.beta.shape}) to server.")
-            # Print a snippet of the parameters
             print(f"    Snippet: {self.beta[:3]}") 
             
         return [self.beta]
@@ -90,7 +122,6 @@ class CoxPHModel(BaseSurvivalModel):
         
         if self.verbose:
             print(f"[CoxPHModel] SET_PARAMS: Global beta received (shape {self.beta.shape}).")
-            # Print a snippet of the parameters
             print(f"    Snippet: {self.beta[:3]}")
 
     def fit(self, data: dict):
@@ -110,9 +141,11 @@ class CoxPHModel(BaseSurvivalModel):
         # 3. Initialize parameters if this is the first run
         if self.beta is None:
             n_features = X.shape[1]
-            self.beta = np.zeros(n_features) # Start with zeros
+            self.beta = np.zeros(n_features)
             if self.verbose:
                 print(f"[CoxPHModel] FIT: Initializing with {n_features} features (zeros).")
+                if self.l1_penalty > 0:
+                    print(f"    L1 penalty: {self.l1_penalty}")
         
         # Verbose print before optimization
         if self.verbose:
@@ -135,7 +168,6 @@ class CoxPHModel(BaseSurvivalModel):
                 tol=self.tol
             )
             
-            # --- CRITICAL DEBUGGING PRINTS ---
             if self.verbose:
                 print("\n--- Optimizer Result ---")
                 print(f"Success: {result.success}")
@@ -143,13 +175,14 @@ class CoxPHModel(BaseSurvivalModel):
                 print(f"Message: {result.message}")
                 print(f"Actual Iterations: {result.nit}")
                 print(f"Final NLL: {result.fun:.6f}")
+                if self.l1_penalty > 0:
+                    print(f"L1 norm of beta: {np.sum(np.abs(result.x)):.6f}")
+                    print(f"Non-zero coefficients: {np.sum(np.abs(result.x) > 1e-4)}/{len(result.x)}")
                 print("------------------------\n")
-            # -----------------------------------
             
             # 5. Update the model parameters
             self.beta = result.x
             
-            # Verbose print after optimization
             if self.verbose:
                 print(f"[CoxPHModel] FIT: Local train finished.")
                 print(f"    Final beta snippet: {self.beta[:3]}")
@@ -181,12 +214,11 @@ class CoxPHModel(BaseSurvivalModel):
                 "mean_risk_score": np.nan,
             }
 
-        # --- Datos numpy ---
         X = X_test_df.values.astype(np.float64)
         event = y_test[event_col].astype(bool)
         time = y_test[duration_col].astype(np.float64)
 
-        # --- Cálculo del C-index (como antes) ---
+        # C-index calculation
         risk_scores = X @ self.beta
         n_concordant = 0.0
         n_permissible = 0.0
@@ -219,7 +251,7 @@ class CoxPHModel(BaseSurvivalModel):
 
         c_index = 0.5 if n_permissible == 0 else n_concordant / n_permissible
 
-        # --- Métricas adicionales ---
+        # Additional metrics
         eta = risk_scores
         exp_eta = np.exp(eta)
         nll = 0.0
@@ -227,15 +259,19 @@ class CoxPHModel(BaseSurvivalModel):
             if event[i]:
                 risk_set = exp_eta[time >= time[i]]
                 nll -= (eta[i] - np.log(np.sum(risk_set)))
+        
+        # Add L1 penalty to NLL for consistency
+        if self.l1_penalty > 0:
+            nll += self.l1_penalty * np.sum(np.abs(self.beta))
+        
         neg_log_likelihood = nll
 
-        # Penalizaciones de información
+        # Information criteria
         k = len(self.beta)
         n = len(time)
         AIC = 2 * k + 2 * neg_log_likelihood
         BIC = np.log(n) * k + 2 * neg_log_likelihood
 
-        # Tasas e interpretación
         event_rate = float(np.mean(event))
         mean_risk = float(np.mean(risk_scores))
 
@@ -254,7 +290,6 @@ class CoxPHModel(BaseSurvivalModel):
 
         return results
 
-    
     def save_model(self, path: str):
         """Save the model parameters to the specified path."""
         with open(path, 'wb') as f:
@@ -271,5 +306,3 @@ class CoxPHModel(BaseSurvivalModel):
         if self.beta is None:
             raise ValueError("Model not trained or parameters not loaded.")
         return X @ self.beta
-    
-    

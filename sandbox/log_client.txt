@@ -413,3 +413,459 @@
 2026-01-16 09:58:09,041 - flwr - INFO - Received: reconnect message 58b517cb-9b73-4ed8-a8f1-21b4a0e18ddc
 2026-01-16 09:58:09,042 - flwr - DEBUG - gRPC channel closed
 2026-01-16 09:58:09,042 - flwr - INFO - Disconnect and shut down
+2026-01-16 11:52:16,065 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:52:16,065 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:52:16,096 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:52:16,097 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:52:16,097 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 11:52:16,102 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 11:52:16,103 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 11:52:16,103 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-16 11:52:16,104 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 11:52:16,104 - flwr - INFO - 
+2026-01-16 11:52:16,104 - flwr - INFO - Received: get_parameters message d46dd836-1142-42cb-8e45-77cf8dbc34f4
+2026-01-16 11:52:16,105 - flwr - INFO - Sent reply
+2026-01-16 11:52:16,107 - flwr - INFO - 
+2026-01-16 11:52:16,107 - flwr - INFO - Received: reconnect message f9d4947d-62b3-4db8-a62b-232c39607e8c
+2026-01-16 11:52:16,108 - flwr - DEBUG - gRPC channel closed
+2026-01-16 11:52:16,108 - flwr - INFO - Disconnect and shut down
+2026-01-16 11:53:21,667 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:53:21,667 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:53:21,686 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:53:21,686 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:53:21,686 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 11:53:21,689 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 11:53:21,690 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 11:53:21,690 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 11:53:21,691 - flwr - INFO - 
+2026-01-16 11:53:21,691 - flwr - INFO - Received: get_parameters message 89d63120-535d-40d3-ad5c-989cb2164b7b
+2026-01-16 11:53:21,692 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,388 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:53:25,388 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:53:25,406 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:53:25,406 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:53:25,407 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 11:53:25,410 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 11:53:25,411 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 11:53:25,411 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-16 11:53:25,412 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 11:53:25,413 - flwr - INFO - 
+2026-01-16 11:53:25,413 - flwr - INFO - 
+2026-01-16 11:53:25,413 - flwr - INFO - Received: train message 19fad9dc-fc6f-41c5-b8d7-517aa3046299
+2026-01-16 11:53:25,413 - flwr - INFO - Received: train message 75ed8752-7d02-43cf-b5be-d66fcc55dcef
+2026-01-16 11:53:25,413 - STDOUT - INFO - [Client] Initialized model type from server: cox
+2026-01-16 11:53:25,413 - STDOUT - INFO - [Client] Initialized model type from server: cox
+2026-01-16 11:53:25,413 - STDOUT - INFO - [CoxPHModel] FIT: Initializing with 5 features (zeros).
+2026-01-16 11:53:25,413 - STDOUT - INFO - [CoxPHModel] FIT: Initializing with 5 features (zeros).
+2026-01-16 11:53:25,413 - STDOUT - INFO -     L1 penalty: 0.1
+2026-01-16 11:53:25,413 - STDOUT - INFO -     L1 penalty: 0.1
+2026-01-16 11:53:25,413 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2026-01-16 11:53:25,413 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2026-01-16 11:53:25,414 - STDOUT - INFO -     Initial beta snippet: [0. 0. 0.]
+2026-01-16 11:53:25,414 - STDOUT - INFO -     Initial beta snippet: [0. 0. 0.]
+2026-01-16 11:53:25,424 - STDOUT - INFO - Optimization terminated successfully.
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Current function value: 385.508150
+2026-01-16 11:53:25,424 - STDOUT - INFO - Optimization terminated successfully.
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Iterations: 2
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Current function value: 383.727450
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Function evaluations: 3
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Iterations: 2
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Gradient evaluations: 3
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Hessian evaluations: 2
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Function evaluations: 3
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Gradient evaluations: 3
+2026-01-16 11:53:25,424 - STDOUT - INFO - 
+2026-01-16 11:53:25,424 - STDOUT - INFO - --- Optimizer Result ---
+2026-01-16 11:53:25,424 - STDOUT - INFO -          Hessian evaluations: 2
+2026-01-16 11:53:25,424 - STDOUT - INFO - Success: True
+2026-01-16 11:53:25,424 - STDOUT - INFO - 
+2026-01-16 11:53:25,424 - STDOUT - INFO - Status: 0
+2026-01-16 11:53:25,424 - STDOUT - INFO - --- Optimizer Result ---
+2026-01-16 11:53:25,424 - STDOUT - INFO - Message: Optimization terminated successfully.
+2026-01-16 11:53:25,424 - STDOUT - INFO - Success: True
+2026-01-16 11:53:25,424 - STDOUT - INFO - Actual Iterations: 2
+2026-01-16 11:53:25,424 - STDOUT - INFO - Status: 0
+2026-01-16 11:53:25,424 - STDOUT - INFO - Final NLL: 385.508150
+2026-01-16 11:53:25,424 - STDOUT - INFO - Message: Optimization terminated successfully.
+2026-01-16 11:53:25,425 - STDOUT - INFO - Actual Iterations: 2
+2026-01-16 11:53:25,425 - STDOUT - INFO - L1 norm of beta: 1.389992
+2026-01-16 11:53:25,425 - STDOUT - INFO - Final NLL: 383.727450
+2026-01-16 11:53:25,425 - STDOUT - INFO - Non-zero coefficients: 5/5
+2026-01-16 11:53:25,425 - STDOUT - INFO - ------------------------
+2026-01-16 11:53:25,425 - STDOUT - INFO - L1 norm of beta: 1.337271
+2026-01-16 11:53:25,425 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2026-01-16 11:53:25,425 - STDOUT - INFO - Non-zero coefficients: 5/5
+2026-01-16 11:53:25,425 - STDOUT - INFO - ------------------------
+2026-01-16 11:53:25,425 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2026-01-16 11:53:25,425 - STDOUT - INFO -     Final beta snippet: [ 0.29991556 -0.48273971 -0.22334231]
+2026-01-16 11:53:25,425 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,425 - STDOUT - INFO -     Final beta snippet: [ 0.3223137  -0.45949663 -0.28247524]
+2026-01-16 11:53:25,425 - STDOUT - INFO -     Snippet: [ 0.29991556 -0.48273971 -0.22334231]
+2026-01-16 11:53:25,425 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,425 - STDOUT - INFO -     Snippet: [ 0.3223137  -0.45949663 -0.28247524]
+2026-01-16 11:53:25,425 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,426 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,427 - flwr - INFO - 
+2026-01-16 11:53:25,427 - flwr - INFO - Received: evaluate message 693863e0-8395-4c3c-9ef1-3e10af100f98
+2026-01-16 11:53:25,427 - flwr - INFO - 
+2026-01-16 11:53:25,427 - flwr - INFO - Received: evaluate message 9dc05e31-e166-4004-b6e0-0fc51915fd15
+2026-01-16 11:53:25,427 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,428 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,428 - STDOUT - INFO -     Snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,428 - STDOUT - INFO -     Snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,428 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.7212806026365348, 'permissible_pairs': 531.0, 'neg_log_likelihood': 64.83432498392641, 'AIC': 139.66864996785282, 'BIC': 148.1130472384225, 'event_rate': 0.65, 'mean_risk_score': 0.16820683558848096}
+2026-01-16 11:53:25,428 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,428 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6883116883116883, 'permissible_pairs': 539.0, 'neg_log_likelihood': 66.97163251628272, 'AIC': 143.94326503256545, 'BIC': 152.38766230313513, 'event_rate': 0.65, 'mean_risk_score': 0.0070708876652417815}
+2026-01-16 11:53:25,428 - STDOUT - INFO -     Snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,428 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,428 - STDOUT - INFO -     Snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,429 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,429 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,430 - flwr - INFO - 
+2026-01-16 11:53:25,430 - flwr - INFO - Received: train message a2912ee6-b459-463b-87d7-403de3cefdf6
+2026-01-16 11:53:25,430 - flwr - INFO - 
+2026-01-16 11:53:25,430 - flwr - INFO - Received: train message 5e24eeb9-5264-41ff-90e5-9d9b8b800359
+2026-01-16 11:53:25,430 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,430 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,431 - STDOUT - INFO -     Snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,431 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2026-01-16 11:53:25,431 - STDOUT - INFO -     Snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,431 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2026-01-16 11:53:25,431 - STDOUT - INFO -     Initial beta snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,431 - STDOUT - INFO -     Initial beta snippet: [ 0.31111463 -0.47111817 -0.25290878]
+2026-01-16 11:53:25,435 - STDOUT - INFO - Optimization terminated successfully.
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Current function value: 385.408316
+2026-01-16 11:53:25,435 - STDOUT - INFO - Optimization terminated successfully.
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Iterations: 1
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Current function value: 383.687354
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Function evaluations: 2
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Iterations: 1
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Gradient evaluations: 2
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Function evaluations: 2
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Gradient evaluations: 2
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Hessian evaluations: 1
+2026-01-16 11:53:25,435 - STDOUT - INFO - 
+2026-01-16 11:53:25,435 - STDOUT - INFO - --- Optimizer Result ---
+2026-01-16 11:53:25,435 - STDOUT - INFO -          Hessian evaluations: 1
+2026-01-16 11:53:25,435 - STDOUT - INFO - Success: True
+2026-01-16 11:53:25,435 - STDOUT - INFO - 
+2026-01-16 11:53:25,435 - STDOUT - INFO - Status: 0
+2026-01-16 11:53:25,435 - STDOUT - INFO - --- Optimizer Result ---
+2026-01-16 11:53:25,435 - STDOUT - INFO - Message: Optimization terminated successfully.
+2026-01-16 11:53:25,435 - STDOUT - INFO - Success: True
+2026-01-16 11:53:25,435 - STDOUT - INFO - Actual Iterations: 1
+2026-01-16 11:53:25,435 - STDOUT - INFO - Final NLL: 383.687354
+2026-01-16 11:53:25,435 - STDOUT - INFO - Status: 0
+2026-01-16 11:53:25,435 - STDOUT - INFO - Message: Optimization terminated successfully.
+2026-01-16 11:53:25,435 - STDOUT - INFO - L1 norm of beta: 1.389129
+2026-01-16 11:53:25,435 - STDOUT - INFO - Actual Iterations: 1
+2026-01-16 11:53:25,435 - STDOUT - INFO - Non-zero coefficients: 5/5
+2026-01-16 11:53:25,435 - STDOUT - INFO - Final NLL: 385.408316
+2026-01-16 11:53:25,435 - STDOUT - INFO - ------------------------
+2026-01-16 11:53:25,435 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2026-01-16 11:53:25,435 - STDOUT - INFO - L1 norm of beta: 1.443112
+2026-01-16 11:53:25,435 - STDOUT - INFO - Non-zero coefficients: 5/5
+2026-01-16 11:53:25,436 - STDOUT - INFO - ------------------------
+2026-01-16 11:53:25,436 - STDOUT - INFO -     Final beta snippet: [ 0.32324096 -0.46887997 -0.2998211 ]
+2026-01-16 11:53:25,436 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2026-01-16 11:53:25,436 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,436 - STDOUT - INFO -     Snippet: [ 0.32324096 -0.46887997 -0.2998211 ]
+2026-01-16 11:53:25,436 - STDOUT - INFO -     Final beta snippet: [ 0.33701577 -0.46389575 -0.2463728 ]
+2026-01-16 11:53:25,436 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,436 - STDOUT - INFO -     Snippet: [ 0.33701577 -0.46389575 -0.2463728 ]
+2026-01-16 11:53:25,436 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,436 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,437 - flwr - INFO - 
+2026-01-16 11:53:25,437 - flwr - INFO - Received: evaluate message b966a211-1c03-4cc6-801e-f2859fc8518d
+2026-01-16 11:53:25,437 - flwr - INFO - 
+2026-01-16 11:53:25,438 - flwr - INFO - Received: evaluate message 433ecebf-5f96-4fad-8a20-3ceca80bd53b
+2026-01-16 11:53:25,438 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,438 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,438 - STDOUT - INFO -     Snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,438 - STDOUT - INFO -     Snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,438 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.7269303201506592, 'permissible_pairs': 531.0, 'neg_log_likelihood': 64.60051131864819, 'AIC': 139.20102263729638, 'BIC': 147.64541990786606, 'event_rate': 0.65, 'mean_risk_score': 0.17256743018469994}
+2026-01-16 11:53:25,438 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6846011131725418, 'permissible_pairs': 539.0, 'neg_log_likelihood': 66.88950883116293, 'AIC': 143.77901766232586, 'BIC': 152.22341493289554, 'event_rate': 0.65, 'mean_risk_score': 0.004945381247179586}
+2026-01-16 11:53:25,439 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,439 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,439 - STDOUT - INFO -     Snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,439 - STDOUT - INFO -     Snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,439 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,439 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,440 - flwr - INFO - 
+2026-01-16 11:53:25,440 - flwr - INFO - Received: train message 02a0ea9d-fb9a-442d-a7b5-a3f22be30c31
+2026-01-16 11:53:25,441 - flwr - INFO - 
+2026-01-16 11:53:25,441 - flwr - INFO - Received: train message 1a5cd4d4-b02d-4dd1-8d2c-52485c90a177
+2026-01-16 11:53:25,441 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,441 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,441 - STDOUT - INFO -     Snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,441 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2026-01-16 11:53:25,441 - STDOUT - INFO -     Snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,441 - STDOUT - INFO - [CoxPHModel] FIT: Starting local train (max_iter=5).
+2026-01-16 11:53:25,441 - STDOUT - INFO -     Initial beta snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,441 - STDOUT - INFO -     Initial beta snippet: [ 0.33012837 -0.46638786 -0.27309695]
+2026-01-16 11:53:25,445 - STDOUT - INFO - Optimization terminated successfully.
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Current function value: 385.402900
+2026-01-16 11:53:25,445 - STDOUT - INFO - Optimization terminated successfully.
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Iterations: 1
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Function evaluations: 2
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Current function value: 383.683561
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Gradient evaluations: 2
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Iterations: 1
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Hessian evaluations: 1
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Function evaluations: 2
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Gradient evaluations: 2
+2026-01-16 11:53:25,445 - STDOUT - INFO - 
+2026-01-16 11:53:25,445 - STDOUT - INFO - --- Optimizer Result ---
+2026-01-16 11:53:25,445 - STDOUT - INFO -          Hessian evaluations: 1
+2026-01-16 11:53:25,445 - STDOUT - INFO - Success: True
+2026-01-16 11:53:25,445 - STDOUT - INFO - 
+2026-01-16 11:53:25,445 - STDOUT - INFO - --- Optimizer Result ---
+2026-01-16 11:53:25,445 - STDOUT - INFO - Status: 0
+2026-01-16 11:53:25,446 - STDOUT - INFO - Message: Optimization terminated successfully.
+2026-01-16 11:53:25,446 - STDOUT - INFO - Success: True
+2026-01-16 11:53:25,446 - STDOUT - INFO - Actual Iterations: 1
+2026-01-16 11:53:25,446 - STDOUT - INFO - Status: 0
+2026-01-16 11:53:25,446 - STDOUT - INFO - Message: Optimization terminated successfully.
+2026-01-16 11:53:25,446 - STDOUT - INFO - Final NLL: 385.402900
+2026-01-16 11:53:25,446 - STDOUT - INFO - Actual Iterations: 1
+2026-01-16 11:53:25,446 - STDOUT - INFO - L1 norm of beta: 1.462061
+2026-01-16 11:53:25,446 - STDOUT - INFO - Final NLL: 383.683561
+2026-01-16 11:53:25,446 - STDOUT - INFO - Non-zero coefficients: 5/5
+2026-01-16 11:53:25,446 - STDOUT - INFO - L1 norm of beta: 1.394579
+2026-01-16 11:53:25,446 - STDOUT - INFO - ------------------------
+2026-01-16 11:53:25,446 - STDOUT - INFO - Non-zero coefficients: 5/5
+2026-01-16 11:53:25,446 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2026-01-16 11:53:25,446 - STDOUT - INFO - ------------------------
+2026-01-16 11:53:25,446 - STDOUT - INFO - [CoxPHModel] FIT: Local train finished.
+2026-01-16 11:53:25,446 - STDOUT - INFO -     Final beta snippet: [ 0.34831562 -0.46772922 -0.25037155]
+2026-01-16 11:53:25,446 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,446 - STDOUT - INFO -     Final beta snippet: [ 0.32473903 -0.47194841 -0.29421927]
+2026-01-16 11:53:25,446 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,446 - STDOUT - INFO -     Snippet: [ 0.34831562 -0.46772922 -0.25037155]
+2026-01-16 11:53:25,446 - STDOUT - INFO -     Snippet: [ 0.32473903 -0.47194841 -0.29421927]
+2026-01-16 11:53:25,446 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,446 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,448 - flwr - INFO - 
+2026-01-16 11:53:25,448 - flwr - INFO - Received: evaluate message 1bcec208-42d6-4430-9bf0-61fee62fa868
+2026-01-16 11:53:25,448 - flwr - INFO - 
+2026-01-16 11:53:25,448 - flwr - INFO - Received: evaluate message 7d3e78d6-1625-44e0-a7de-6491ba08c9b2
+2026-01-16 11:53:25,450 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,450 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,450 - STDOUT - INFO -     Snippet: [ 0.33652732 -0.46983881 -0.27229541]
+2026-01-16 11:53:25,450 - STDOUT - INFO -     Snippet: [ 0.33652732 -0.46983881 -0.27229541]
+2026-01-16 11:53:25,450 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.7269303201506592, 'permissible_pairs': 531.0, 'neg_log_likelihood': 64.55475238099613, 'AIC': 139.10950476199227, 'BIC': 147.55390203256195, 'event_rate': 0.65, 'mean_risk_score': 0.17458445669028227}
+2026-01-16 11:53:25,450 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,450 - STDOUT - INFO - [CoxPHModel] Evaluation results: {'c_index': 0.6827458256029685, 'permissible_pairs': 539.0, 'neg_log_likelihood': 66.85028352931153, 'AIC': 143.70056705862305, 'BIC': 152.14496432919273, 'event_rate': 0.65, 'mean_risk_score': 0.0056720288512185245}
+2026-01-16 11:53:25,451 - STDOUT - INFO -     Snippet: [ 0.33652732 -0.46983881 -0.27229541]
+2026-01-16 11:53:25,451 - STDOUT - INFO - [CoxPHModel] GET_PARAMS: Returning beta (shape (5,)) to server.
+2026-01-16 11:53:25,451 - STDOUT - INFO -     Snippet: [ 0.33652732 -0.46983881 -0.27229541]
+2026-01-16 11:53:25,451 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,451 - flwr - INFO - Sent reply
+2026-01-16 11:53:25,453 - flwr - INFO - 
+2026-01-16 11:53:25,453 - flwr - INFO - Received: reconnect message 40199f59-17f3-45d1-b960-ccef4ad537cc
+2026-01-16 11:53:25,453 - flwr - INFO - 
+2026-01-16 11:53:25,454 - flwr - INFO - Received: reconnect message 2919c6f3-6afe-4e86-b5d4-edecd906d74b
+2026-01-16 11:53:25,454 - flwr - DEBUG - gRPC channel closed
+2026-01-16 11:53:25,454 - flwr - DEBUG - gRPC channel closed
+2026-01-16 11:53:25,454 - flwr - INFO - Disconnect and shut down
+2026-01-16 11:53:25,454 - flwr - INFO - Disconnect and shut down
+2026-01-16 11:54:12,432 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:54:12,432 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:54:12,451 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:54:12,452 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:54:12,452 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 11:54:12,455 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 11:54:12,456 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 11:54:12,457 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-16 11:54:12,460 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 11:54:12,460 - flwr - INFO - 
+2026-01-16 11:54:12,460 - flwr - INFO - Received: get_parameters message 232dd72e-fb00-401f-892c-d6baef6a3434
+2026-01-16 11:54:12,461 - flwr - INFO - Sent reply
+2026-01-16 11:54:16,720 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:54:16,720 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:54:16,738 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:54:16,738 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:54:16,739 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 11:54:16,742 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 11:54:16,742 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 11:54:16,743 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 11:54:16,744 - flwr - INFO - 
+2026-01-16 11:54:16,744 - flwr - INFO - Received: train message c8d735ed-8afe-4741-804f-1777e0b7ef93
+2026-01-16 11:54:16,744 - flwr - INFO - 
+2026-01-16 11:54:16,744 - flwr - INFO - Received: train message c72b5d2c-e626-4ca3-9af0-b63618c3e4e0
+2026-01-16 11:54:16,744 - STDOUT - INFO - [Client] Initialized model type from server: rsf
+2026-01-16 11:54:16,745 - STDOUT - INFO - [Client] Initialized model type from server: rsf
+2026-01-16 11:54:16,942 - flwr - INFO - Sent reply
+2026-01-16 11:54:16,946 - flwr - INFO - Sent reply
+2026-01-16 11:54:17,458 - flwr - INFO - 
+2026-01-16 11:54:17,458 - flwr - INFO - Received: evaluate message 6b1ff7b1-10d3-4898-b089-e1478b3b194d
+2026-01-16 11:54:17,472 - flwr - INFO - 
+2026-01-16 11:54:17,472 - flwr - INFO - Received: evaluate message 69cb67fa-f769-48cb-97fa-ce37f2047eec
+2026-01-16 11:54:17,502 - STDOUT - INFO - [RSFModel] Restored 200 trees with 5 features.
+2026-01-16 11:54:17,515 - STDOUT - INFO - [RSFModel] Restored 200 trees with 5 features.
+2026-01-16 11:54:18,909 - STDOUT - INFO - [RSFModel] Warning: could not compute IBS: all times must be within follow-up time of test data: [0.2810100603496362; 27.823085339383468[
+2026-01-16 11:54:18,910 - STDOUT - INFO - [RSFModel] Evaluation results: {'c_index': 0.3068893528183716, 'brier_score': 0.19506691565631662, 'ibs': nan, 'accuracy': 0.3068893528183716}
+2026-01-16 11:54:18,937 - STDOUT - INFO - [RSFModel] Evaluation results: {'c_index': 0.3392405063291139, 'brier_score': 0.17876572500585497, 'ibs': 0.09947097729010135, 'accuracy': 0.3392405063291139}
+2026-01-16 11:54:18,979 - flwr - INFO - Sent reply
+2026-01-16 11:54:18,999 - flwr - INFO - Sent reply
+2026-01-16 11:54:19,259 - flwr - INFO - 
+2026-01-16 11:54:19,259 - flwr - INFO - Received: train message dc6e9802-29b7-47ba-92ba-2fd2c3f64474
+2026-01-16 11:54:19,285 - STDOUT - INFO - [RSFModel] Restored 200 trees with 5 features.
+2026-01-16 11:54:19,297 - flwr - INFO - 
+2026-01-16 11:54:19,297 - flwr - INFO - Received: train message e201ded7-4947-441d-b82c-042a008ec204
+2026-01-16 11:54:19,319 - STDOUT - INFO - [RSFModel] Restored 200 trees with 5 features.
+2026-01-16 11:54:19,636 - flwr - INFO - Sent reply
+2026-01-16 11:54:19,676 - flwr - INFO - Sent reply
+2026-01-16 11:54:20,610 - flwr - INFO - 
+2026-01-16 11:54:20,610 - flwr - INFO - Received: evaluate message 9d57271e-84c4-4a64-9c70-5e34930354e0
+2026-01-16 11:54:20,664 - STDOUT - INFO - [RSFModel] Restored 400 trees with 5 features.
+2026-01-16 11:54:20,702 - flwr - INFO - 
+2026-01-16 11:54:20,702 - flwr - INFO - Received: evaluate message 3ae3f648-edd5-4011-9a14-5f165b393fdc
+2026-01-16 11:54:20,769 - STDOUT - INFO - [RSFModel] Restored 400 trees with 5 features.
+2026-01-16 11:54:27,548 - STDOUT - INFO - [RSFModel] Warning: could not compute IBS: all times must be within follow-up time of test data: [0.2810100603496362; 27.823085339383468[
+2026-01-16 11:54:27,549 - STDOUT - INFO - [RSFModel] Evaluation results: {'c_index': 0.2964509394572025, 'brier_score': 0.1935089974287539, 'ibs': nan, 'accuracy': 0.2964509394572025}
+2026-01-16 11:54:27,620 - STDOUT - INFO - [RSFModel] Evaluation results: {'c_index': 0.3341772151898734, 'brier_score': 0.17674324713172646, 'ibs': 0.0975727073105811, 'accuracy': 0.3341772151898734}
+2026-01-16 11:54:27,679 - flwr - INFO - Sent reply
+2026-01-16 11:54:27,775 - flwr - INFO - Sent reply
+2026-01-16 11:54:28,444 - flwr - INFO - 
+2026-01-16 11:54:28,445 - flwr - INFO - Received: train message 8130c382-5b09-4c26-9b3d-be4c6b17014b
+2026-01-16 11:54:28,490 - STDOUT - INFO - [RSFModel] Restored 400 trees with 5 features.
+2026-01-16 11:54:28,568 - flwr - INFO - 
+2026-01-16 11:54:28,568 - flwr - INFO - Received: train message f38f093f-2d5f-4435-bf13-49342b6ef938
+2026-01-16 11:54:28,609 - STDOUT - INFO - [RSFModel] Restored 400 trees with 5 features.
+2026-01-16 11:54:29,192 - flwr - INFO - Sent reply
+2026-01-16 11:54:29,312 - flwr - INFO - Sent reply
+2026-01-16 11:54:31,022 - flwr - INFO - 
+2026-01-16 11:54:31,022 - flwr - INFO - Received: evaluate message 5a79c2c1-5ec1-4102-ba5e-4b54ec5b0eab
+2026-01-16 11:54:31,163 - STDOUT - INFO - [RSFModel] Restored 800 trees with 5 features.
+2026-01-16 11:54:31,264 - flwr - INFO - 
+2026-01-16 11:54:31,264 - flwr - INFO - Received: evaluate message 44c2c393-72dd-43c3-a40a-5d0f34ebc472
+2026-01-16 11:54:31,395 - STDOUT - INFO - [RSFModel] Restored 800 trees with 5 features.
+2026-01-16 11:54:42,529 - STDOUT - INFO - [RSFModel] Evaluation results: {'c_index': 0.2881002087682672, 'brier_score': 0.18993101463487022, 'ibs': 0.1325764020953952, 'accuracy': 0.2881002087682672}
+2026-01-16 11:54:42,613 - STDOUT - INFO - [RSFModel] Warning: could not compute IBS: all times must be within follow-up time of test data: [0.01936116818365152; 36.61498203733295[
+2026-01-16 11:54:42,615 - STDOUT - INFO - [RSFModel] Evaluation results: {'c_index': 0.3367088607594937, 'brier_score': 0.17248524003090157, 'ibs': nan, 'accuracy': 0.3367088607594937}
+2026-01-16 11:54:42,814 - flwr - INFO - Sent reply
+2026-01-16 11:54:42,875 - flwr - INFO - Sent reply
+2026-01-16 11:54:42,930 - flwr - INFO - 
+2026-01-16 11:54:42,930 - flwr - INFO - 
+2026-01-16 11:54:42,930 - flwr - INFO - Received: reconnect message b70efa6f-c824-4fc8-b4f6-5b446450214d
+2026-01-16 11:54:42,930 - flwr - INFO - Received: reconnect message 3e170890-980a-4f13-ad6f-550bfed79a81
+2026-01-16 11:54:42,940 - flwr - DEBUG - gRPC channel closed
+2026-01-16 11:54:42,940 - flwr - INFO - Disconnect and shut down
+2026-01-16 11:54:42,941 - flwr - DEBUG - gRPC channel closed
+2026-01-16 11:54:42,941 - flwr - INFO - Disconnect and shut down

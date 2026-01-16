@@ -218,3 +218,336 @@ than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
 2026-01-16 09:58:09,040 - flwr - INFO - [SUMMARY]
 2026-01-16 09:58:09,040 - flwr - INFO - Run finished 3 round(s) in 0.00s
 2026-01-16 09:58:09,040 - flwr - INFO - 
+2026-01-16 11:50:17,456 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:50:17,456 - root - DEBUG - Starting Flower server...
+2026-01-16 11:50:17,456 - STDOUT - INFO - ELSE
+2026-01-16 11:50:17,460 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-16 11:50:17,460 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/server_cmd.py", line 202, in <module>
+2026-01-16 11:50:17,460 - STDERR - ERROR - server, strategy = get_model_server_and_strategy(config)
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,460 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/server_selector.py", line 25, in get_model_server_and_strategy
+2026-01-16 11:50:17,461 - STDERR - ERROR - server, strategy = cox_server.get_server_and_strategy(config)
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,461 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/cox/server.py", line 149, in get_server_and_strategy
+2026-01-16 11:50:17,462 - STDERR - ERROR - strategy = CustomStrategy(
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR - ^
+2026-01-16 11:50:17,462 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/cox/server.py", line 29, in __init__
+2026-01-16 11:50:17,462 - STDERR - ERROR - super().__init__(**kwargs)
+2026-01-16 11:50:17,462 - STDERR - ERROR - TypeError
+2026-01-16 11:50:17,462 - STDERR - ERROR - :
+2026-01-16 11:50:17,462 - STDERR - ERROR - FedAvg.__init__() got an unexpected keyword argument 'l1_penalty'
+2026-01-16 11:51:11,206 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:51:11,207 - root - DEBUG - Starting Flower server...
+2026-01-16 11:51:11,207 - STDOUT - INFO - ELSE
+2026-01-16 11:51:11,210 - flwr - WARNING - 
+Setting `min_available_clients` lower than `min_fit_clients` or
+`min_evaluate_clients` can cause the server to fail when there are too few clients
+connected to the server. `min_available_clients` must be set to a value larger
+than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
+
+2026-01-16 11:51:11,211 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:51:11,211 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-16 11:51:11,216 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-16 11:51:11,216 - flwr - INFO - [INIT]
+2026-01-16 11:51:11,216 - flwr - INFO - Requesting initial parameters from one random client
+2026-01-16 11:52:16,105 - flwr - INFO - Received initial parameters from one random client
+2026-01-16 11:52:16,105 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-16 11:52:16,105 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-16 11:52:16,106 - flwr - INFO - 
+2026-01-16 11:52:16,106 - flwr - INFO - [ROUND 1]
+2026-01-16 11:52:16,106 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 11:52:16,106 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 11:52:16,106 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 11:52:16,106 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 11:52:16,106 - flwr - INFO - 
+2026-01-16 11:52:16,106 - flwr - INFO - [ROUND 2]
+2026-01-16 11:52:16,106 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 11:52:16,106 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 11:52:16,106 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 11:52:16,106 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 11:52:16,106 - flwr - INFO - 
+2026-01-16 11:52:16,106 - flwr - INFO - [ROUND 3]
+2026-01-16 11:52:16,106 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 11:52:16,106 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 11:52:16,106 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 11:52:16,106 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 11:52:16,106 - flwr - INFO - 
+2026-01-16 11:52:16,106 - flwr - INFO - [SUMMARY]
+2026-01-16 11:52:16,106 - flwr - INFO - Run finished 3 round(s) in 0.00s
+2026-01-16 11:52:16,106 - flwr - INFO - 
+2026-01-16 11:53:05,436 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:53:05,436 - root - DEBUG - Starting Flower server...
+2026-01-16 11:53:05,436 - STDOUT - INFO - ELSE
+2026-01-16 11:53:05,440 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:53:05,440 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-16 11:53:05,445 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-16 11:53:05,445 - flwr - INFO - [INIT]
+2026-01-16 11:53:05,445 - flwr - INFO - Requesting initial parameters from one random client
+2026-01-16 11:53:21,692 - flwr - INFO - Received initial parameters from one random client
+2026-01-16 11:53:21,692 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-16 11:53:21,692 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-16 11:53:21,692 - flwr - INFO - 
+2026-01-16 11:53:21,692 - flwr - INFO - [ROUND 1]
+2026-01-16 11:53:25,412 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-16 11:53:25,426 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-16 11:53:25,427 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-16 11:53:25,429 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-16 11:53:25,429 - flwr - INFO - 
+2026-01-16 11:53:25,430 - flwr - INFO - [ROUND 2]
+2026-01-16 11:53:25,430 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-16 11:53:25,436 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-16 11:53:25,437 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-16 11:53:25,440 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-16 11:53:25,440 - flwr - INFO - 
+2026-01-16 11:53:25,440 - flwr - INFO - [ROUND 3]
+2026-01-16 11:53:25,440 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-16 11:53:25,447 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-16 11:53:25,447 - STDOUT - INFO - [array([ 0.33652732, -0.46983881, -0.27229541,  0.15235108,  0.19730737])]
+2026-01-16 11:53:25,447 - STDOUT - INFO - [CoxPHModel] SET_PARAMS: Global beta received (shape (5,)).
+2026-01-16 11:53:25,448 - STDOUT - INFO -     Snippet: [ 0.33652732 -0.46983881 -0.27229541]
+2026-01-16 11:53:25,448 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-16 11:53:25,451 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-16 11:53:25,452 - flwr - INFO - 
+2026-01-16 11:53:25,452 - flwr - INFO - [SUMMARY]
+2026-01-16 11:53:25,452 - flwr - INFO - Run finished 3 round(s) in 3.76s
+2026-01-16 11:53:25,452 - flwr - INFO - 	History (loss, distributed):
+2026-01-16 11:53:25,452 - flwr - INFO - 		round 1: 0.2952038496732712
+2026-01-16 11:53:25,452 - flwr - INFO - 		round 2: 0.2942342907190323
+2026-01-16 11:53:25,452 - flwr - INFO - 		round 3: 0.2951619327068329
+2026-01-16 11:53:25,452 - flwr - INFO - 	History (metrics, distributed, evaluate):
+2026-01-16 11:53:25,452 - flwr - INFO - 	{'AIC': [(1, 141.80595750020913),
+2026-01-16 11:53:25,452 - flwr - INFO - 	         (2, 141.49002014981113),
+2026-01-16 11:53:25,452 - flwr - INFO - 	         (3, 141.40503591030767)],
+2026-01-16 11:53:25,453 - flwr - INFO - 	 'BIC': [(1, 150.2503547707788),
+2026-01-16 11:53:25,453 - flwr - INFO - 	         (2, 149.93441742038078),
+2026-01-16 11:53:25,453 - flwr - INFO - 	         (3, 149.84943318087733)],
+2026-01-16 11:53:25,453 - flwr - INFO - 	 'c_index': [(1, 0.7047961454741116),
+2026-01-16 11:53:25,453 - flwr - INFO - 	             (2, 0.7057657166616005),
+2026-01-16 11:53:25,453 - flwr - INFO - 	             (3, 0.7048380728768138)],
+2026-01-16 11:53:25,453 - flwr - INFO - 	 'event_rate': [(1, 0.65), (2, 0.65), (3, 0.65)],
+2026-01-16 11:53:25,453 - flwr - INFO - 	 'mean_risk_score': [(1, 0.08763886162686137),
+2026-01-16 11:53:25,453 - flwr - INFO - 	                     (2, 0.08875640571593976),
+2026-01-16 11:53:25,453 - flwr - INFO - 	                     (3, 0.0901282427707504)],
+2026-01-16 11:53:25,453 - flwr - INFO - 	 'neg_log_likelihood': [(1, 65.90297875010457),
+2026-01-16 11:53:25,453 - flwr - INFO - 	                        (2, 65.74501007490557),
+2026-01-16 11:53:25,453 - flwr - INFO - 	                        (3, 65.70251795515384)],
+2026-01-16 11:53:25,453 - flwr - INFO - 	 'permissible_pairs': [(1, 535.0), (2, 535.0), (3, 535.0)]}
+2026-01-16 11:53:25,453 - flwr - INFO - 
+2026-01-16 11:53:25,454 - STDOUT - INFO - History (loss, distributed):
+2026-01-16 11:53:25,455 - STDOUT - INFO - 	round 1: 0.2952038496732712
+2026-01-16 11:53:25,455 - STDOUT - INFO - 	round 2: 0.2942342907190323
+2026-01-16 11:53:25,455 - STDOUT - INFO - 	round 3: 0.2951619327068329
+2026-01-16 11:53:25,455 - STDOUT - INFO - History (metrics, distributed, evaluate):
+2026-01-16 11:53:25,455 - STDOUT - INFO - {'AIC': [(1, 141.80595750020913),
+2026-01-16 11:53:25,455 - STDOUT - INFO -          (2, 141.49002014981113),
+2026-01-16 11:53:25,455 - STDOUT - INFO -          (3, 141.40503591030767)],
+2026-01-16 11:53:25,455 - STDOUT - INFO -  'BIC': [(1, 150.2503547707788),
+2026-01-16 11:53:25,455 - STDOUT - INFO -          (2, 149.93441742038078),
+2026-01-16 11:53:25,455 - STDOUT - INFO -          (3, 149.84943318087733)],
+2026-01-16 11:53:25,455 - STDOUT - INFO -  'c_index': [(1, 0.7047961454741116),
+2026-01-16 11:53:25,455 - STDOUT - INFO -              (2, 0.7057657166616005),
+2026-01-16 11:53:25,455 - STDOUT - INFO -              (3, 0.7048380728768138)],
+2026-01-16 11:53:25,455 - STDOUT - INFO -  'event_rate': [(1, 0.65), (2, 0.65), (3, 0.65)],
+2026-01-16 11:53:25,455 - STDOUT - INFO -  'mean_risk_score': [(1, 0.08763886162686137),
+2026-01-16 11:53:25,455 - STDOUT - INFO -                      (2, 0.08875640571593976),
+2026-01-16 11:53:25,455 - STDOUT - INFO -                      (3, 0.0901282427707504)],
+2026-01-16 11:53:25,456 - STDOUT - INFO -  'neg_log_likelihood': [(1, 65.90297875010457),
+2026-01-16 11:53:25,456 - STDOUT - INFO -                         (2, 65.74501007490557),
+2026-01-16 11:53:25,456 - STDOUT - INFO -                         (3, 65.70251795515384)],
+2026-01-16 11:53:25,456 - STDOUT - INFO -  'permissible_pairs': [(1, 535.0), (2, 535.0), (3, 535.0)]}
+2026-01-16 11:53:59,536 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 11:53:59,536 - root - DEBUG - Starting Flower server...
+2026-01-16 11:53:59,536 - STDOUT - INFO - ELSE
+2026-01-16 11:53:59,539 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 11:53:59,540 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-16 11:53:59,545 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-16 11:53:59,545 - flwr - INFO - [INIT]
+2026-01-16 11:53:59,545 - flwr - INFO - Requesting initial parameters from one random client
+2026-01-16 11:54:12,461 - flwr - INFO - Received initial parameters from one random client
+2026-01-16 11:54:12,461 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-16 11:54:12,461 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-16 11:54:12,461 - flwr - INFO - 
+2026-01-16 11:54:12,462 - flwr - INFO - [ROUND 1]
+2026-01-16 11:54:16,743 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-16 11:54:17,037 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-16 11:54:17,067 - STDOUT - INFO - [RSFAggregator] Aggregated 200 trees from 2 clients.
+2026-01-16 11:54:17,086 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-16 11:54:19,000 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-16 11:54:19,002 - flwr - INFO - 
+2026-01-16 11:54:19,002 - flwr - INFO - [ROUND 2]
+2026-01-16 11:54:19,002 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-16 11:54:19,789 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-16 11:54:19,821 - STDOUT - INFO - [RSFAggregator] Aggregated 400 trees from 2 clients.
+2026-01-16 11:54:19,861 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-16 11:54:27,779 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-16 11:54:27,780 - flwr - INFO - 
+2026-01-16 11:54:27,780 - flwr - INFO - [ROUND 3]
+2026-01-16 11:54:27,780 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-16 11:54:29,527 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-16 11:54:29,595 - STDOUT - INFO - [RSFAggregator] Aggregated 800 trees from 2 clients.
+2026-01-16 11:54:29,667 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-16 11:54:42,896 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-16 11:54:42,897 - flwr - INFO - 
+2026-01-16 11:54:42,897 - flwr - INFO - [SUMMARY]
+2026-01-16 11:54:42,897 - flwr - INFO - Run finished 3 round(s) in 30.44s
+2026-01-16 11:54:42,899 - flwr - INFO - 	History (loss, distributed):
+2026-01-16 11:54:42,899 - flwr - INFO - 		round 1: 0.676935076713562
+2026-01-16 11:54:42,899 - flwr - INFO - 		round 2: 0.6846859455108643
+2026-01-16 11:54:42,899 - flwr - INFO - 		round 3: 0.6875954866409302
+2026-01-16 11:54:42,899 - flwr - INFO - 	History (metrics, distributed, evaluate):
+2026-01-16 11:54:42,899 - flwr - INFO - 	{'accuracy': [(1, 0.3230649295737428),
+2026-01-16 11:54:42,899 - flwr - INFO - 	              (2, 0.315314077323538),
+2026-01-16 11:54:42,899 - flwr - INFO - 	              (3, 0.3124045347638804)],
+2026-01-16 11:54:42,899 - flwr - INFO - 	 'brier_score': [(1, 0.1869163203310858),
+2026-01-16 11:54:42,899 - flwr - INFO - 	                 (2, 0.18512612228024017),
+2026-01-16 11:54:42,899 - flwr - INFO - 	                 (3, 0.18120812733288588)],
+2026-01-16 11:54:42,900 - flwr - INFO - 	 'c_index': [(1, 0.3230649295737428),
+2026-01-16 11:54:42,900 - flwr - INFO - 	             (2, 0.315314077323538),
+2026-01-16 11:54:42,900 - flwr - INFO - 	             (3, 0.3124045347638804)],
+2026-01-16 11:54:42,900 - flwr - INFO - 	 'ibs': [(1, nan), (2, nan), (3, nan)]}
+2026-01-16 11:54:42,900 - flwr - INFO - 
+2026-01-16 11:54:42,951 - STDOUT - INFO - History (loss, distributed):
+2026-01-16 11:54:42,952 - STDOUT - INFO - 	round 1: 0.676935076713562
+2026-01-16 11:54:42,954 - STDOUT - INFO - 	round 2: 0.6846859455108643
+2026-01-16 11:54:42,954 - STDOUT - INFO - 	round 3: 0.6875954866409302
+2026-01-16 11:54:42,954 - STDOUT - INFO - History (metrics, distributed, evaluate):
+2026-01-16 11:54:42,954 - STDOUT - INFO - {'accuracy': [(1, 0.3230649295737428),
+2026-01-16 11:54:42,954 - STDOUT - INFO -               (2, 0.315314077323538),
+2026-01-16 11:54:42,954 - STDOUT - INFO -               (3, 0.3124045347638804)],
+2026-01-16 11:54:42,954 - STDOUT - INFO -  'brier_score': [(1, 0.1869163203310858),
+2026-01-16 11:54:42,954 - STDOUT - INFO -                  (2, 0.18512612228024017),
+2026-01-16 11:54:42,954 - STDOUT - INFO -                  (3, 0.18120812733288588)],
+2026-01-16 11:54:42,954 - STDOUT - INFO -  'c_index': [(1, 0.3230649295737428),
+2026-01-16 11:54:42,954 - STDOUT - INFO -              (2, 0.315314077323538),
+2026-01-16 11:54:42,954 - STDOUT - INFO -              (3, 0.3124045347638804)],
+2026-01-16 11:54:42,954 - STDOUT - INFO -  'ibs': [(1, nan), (2, nan), (3, nan)]}
