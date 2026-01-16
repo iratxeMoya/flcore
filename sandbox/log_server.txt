@@ -87,3 +87,134 @@ than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
 2025-12-11 15:06:56,159 - STDOUT - INFO - 	round 5: 0.4030412286520004
 2025-12-11 15:06:56,159 - STDOUT - INFO - History (metrics, distributed, evaluate):
 2025-12-11 15:06:56,160 - STDOUT - INFO - {'BIC': [(1, 159.02901280756345), (2, 159.2362333880534), (3, 159.25215804767333), (4, 159.26936044419972), (5, 159.27463572677703)], 'c_index': [(1, 0.602204689161211), (2, 0.601994851994852), (3, 0.5969587600022382), (4, 0.5959235633148676), (5, 0.5969587600022382)], 'neg_log_likelihood': [(1, 70.2923077684969), (2, 70.39591805874187), (3, 70.40388038855181), (4, 70.41248158681503), (5, 70.41511922810366)], 'AIC': [(1, 150.5846155369938), (2, 150.79183611748374), (3, 150.80776077710362), (4, 150.82496317363007), (5, 150.83023845620733)], 'mean_risk_score': [(1, 0.06548711330372964), (2, 0.06821313271546495), (3, 0.06926295856623446), (4, 0.06983116545332277), (5, 0.07001796781173626)], 'permissible_pairs': [(1, 500.5), (2, 500.5), (3, 500.5), (4, 500.5), (5, 500.5)], 'event_rate': [(1, 0.6375), (2, 0.6375), (3, 0.6375), (4, 0.6375), (5, 0.6375)]}
+2026-01-15 10:30:36,179 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-15 10:30:36,179 - root - DEBUG - Starting Flower server...
+2026-01-15 10:30:36,179 - STDOUT - INFO - ELSE
+2026-01-15 10:30:36,189 - flwr - WARNING - 
+Setting `min_available_clients` lower than `min_fit_clients` or
+`min_evaluate_clients` can cause the server to fail when there are too few clients
+connected to the server. `min_available_clients` must be set to a value larger
+than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
+
+2026-01-15 10:30:36,189 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-15 10:30:36,189 - flwr - INFO - Starting Flower server, config: num_rounds=5, no round_timeout
+2026-01-15 10:30:36,209 - flwr - INFO - Flower ECE: gRPC server running (5 rounds), SSL is disabled
+2026-01-15 10:30:36,209 - flwr - INFO - [INIT]
+2026-01-15 10:30:36,209 - flwr - INFO - Requesting initial parameters from one random client
+2026-01-16 09:55:13,156 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:55:13,157 - root - DEBUG - Starting Flower server...
+2026-01-16 09:55:13,157 - STDOUT - INFO - ELSE
+2026-01-16 09:55:13,160 - flwr - WARNING - 
+Setting `min_available_clients` lower than `min_fit_clients` or
+`min_evaluate_clients` can cause the server to fail when there are too few clients
+connected to the server. `min_available_clients` must be set to a value larger
+than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
+
+2026-01-16 09:55:13,160 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 09:55:13,160 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-16 09:55:13,167 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-16 09:55:13,168 - flwr - INFO - [INIT]
+2026-01-16 09:55:13,168 - flwr - INFO - Requesting initial parameters from one random client
+2026-01-16 09:56:59,316 - flwr - INFO - Received initial parameters from one random client
+2026-01-16 09:56:59,317 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-16 09:56:59,317 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-16 09:56:59,317 - flwr - INFO - 
+2026-01-16 09:56:59,317 - flwr - INFO - [ROUND 1]
+2026-01-16 09:56:59,317 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:56:59,317 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 09:56:59,317 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:56:59,317 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 09:56:59,318 - flwr - INFO - 
+2026-01-16 09:56:59,318 - flwr - INFO - [ROUND 2]
+2026-01-16 09:56:59,318 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:56:59,318 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 09:56:59,318 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:56:59,318 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 09:56:59,318 - flwr - INFO - 
+2026-01-16 09:56:59,318 - flwr - INFO - [ROUND 3]
+2026-01-16 09:56:59,318 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:56:59,318 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 09:56:59,318 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:56:59,318 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 09:56:59,318 - flwr - INFO - 
+2026-01-16 09:56:59,318 - flwr - INFO - [SUMMARY]
+2026-01-16 09:56:59,318 - flwr - INFO - Run finished 3 round(s) in 0.00s
+2026-01-16 09:56:59,318 - flwr - INFO - 
+2026-01-16 09:57:56,268 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:57:56,269 - root - DEBUG - Starting Flower server...
+2026-01-16 09:57:56,269 - STDOUT - INFO - ELSE
+2026-01-16 09:57:56,272 - flwr - WARNING - 
+Setting `min_available_clients` lower than `min_fit_clients` or
+`min_evaluate_clients` can cause the server to fail when there are too few clients
+connected to the server. `min_available_clients` must be set to a value larger
+than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
+
+2026-01-16 09:57:56,272 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 09:57:56,273 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-16 09:57:56,277 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-16 09:57:56,277 - flwr - INFO - [INIT]
+2026-01-16 09:57:56,277 - flwr - INFO - Requesting initial parameters from one random client
+2026-01-16 09:58:09,039 - flwr - INFO - Received initial parameters from one random client
+2026-01-16 09:58:09,039 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-16 09:58:09,039 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-16 09:58:09,039 - flwr - INFO - 
+2026-01-16 09:58:09,039 - flwr - INFO - [ROUND 1]
+2026-01-16 09:58:09,040 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:58:09,040 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 09:58:09,040 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:58:09,040 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 09:58:09,040 - flwr - INFO - 
+2026-01-16 09:58:09,040 - flwr - INFO - [ROUND 2]
+2026-01-16 09:58:09,040 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:58:09,040 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 09:58:09,040 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:58:09,040 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 09:58:09,040 - flwr - INFO - 
+2026-01-16 09:58:09,040 - flwr - INFO - [ROUND 3]
+2026-01-16 09:58:09,040 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:58:09,040 - flwr - INFO - configure_fit: no clients selected, cancel
+2026-01-16 09:58:09,040 - flwr - INFO - Sampling failed: number of available clients (1) is less than number of requested clients (2).
+2026-01-16 09:58:09,040 - flwr - INFO - configure_evaluate: no clients selected, skipping evaluation
+2026-01-16 09:58:09,040 - flwr - INFO - 
+2026-01-16 09:58:09,040 - flwr - INFO - [SUMMARY]
+2026-01-16 09:58:09,040 - flwr - INFO - Run finished 3 round(s) in 0.00s
+2026-01-16 09:58:09,040 - flwr - INFO - 

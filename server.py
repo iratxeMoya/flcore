@@ -114,9 +114,12 @@ if __name__ == "__main__":
         per_client_values = {}
         for metric in history.metrics_distributed:
             metric_value = history.metrics_distributed[metric][best_round][1]
+            print(history.metrics_distributed[metric])
             if type(metric_value) in [int, float, numpy.float64]:
+                print("is int/float", f"{metric} {metric_value:.4f} \n")
                 f.write(f"{metric} {metric_value:.4f} \n")
             else:
+                print("is not int/float", f"{metric} {metric_value:.4f} \n")
                 for per_client_metric_value in metric_value:
                     metric = metric.replace("per client ", "")
                     if metric not in per_client_values:
@@ -124,6 +127,7 @@ if __name__ == "__main__":
                     per_client_values[metric].append(round(per_client_metric_value, 3))
         
         f.write(f"\n\nPer client results:\n\n")
+        print(per_client_values)
         for metric in per_client_values:
             f.write(f"{metric} {per_client_values[metric]} \n")
         

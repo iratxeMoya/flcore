@@ -1,5 +1,5 @@
 T: 20
-checkpoint_selection_metric: AIC
+checkpoint_selection_metric: accuracy
 dataset: survival
 dropout:
   percentage_drop: 0
@@ -7,23 +7,24 @@ dropout_method: null
 experiment:
   debug: 'True'
   log_path: logs
-  name: experiment_surv_1
+  name: experiment_rsf
 experiment_dir: !!python/object/apply:pathlib.PosixPath
 - logs
-- experiment_surv_1
+- experiment_rsf
 local_port: 8081
 metrics_aggregation: weighted_average
-min_available_clients: 2
-min_evaluate_clients: 2
-min_fit_clients: 2
-model: cox
+min_available_clients: 1
+min_evaluate_clients: 1
+min_fit_clients: 1
+model: rsf
+n_estimators: 100
 n_features: 0
 neural_network:
   device: cpu
   dropout_p: 0.2
   local_epochs: 100
-num_clients: 2
-num_rounds: 5
+num_clients: 1
+num_rounds: 3
 production_mode: 'False'
 random_forest:
   balanced_rf: 'true'

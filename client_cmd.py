@@ -83,8 +83,7 @@ if __name__ == "__main__":
     # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
     # parser.add_argument("--model", type=str, default="random_forest", help="Model to train")
     # # COX
-    parser.add_argument("--cox", type=json.loads, default={"time_col": "time","event_col": "event"}, help="COX parameters")
-    parser.add_argument('--negative_duration_strategy', type=str, default='clip', help='Strategy for handling negative durations')
+    parser.add_argument("--survival", type=json.loads, default={"time_col": "time","event_col": "event","negative_duration_strategy": "clip"}, help="Survival models parameters")
 
 # *******************************************************************************************************************
 

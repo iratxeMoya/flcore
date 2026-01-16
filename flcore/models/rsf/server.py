@@ -49,9 +49,6 @@ class CustomStrategy(fl.server.strategy.FedAvg):
             for p in params_list:
                 if isinstance(p, np.ndarray):
                     b = p.tobytes()
-                    if self.verbose:
-                        print(f"[server] converted ndarray->bytes len={len(b)}")
-
                     params_as_bytes.append(b)
                 else:
                     params_as_bytes.append(p)

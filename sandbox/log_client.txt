@@ -311,3 +311,105 @@
 2025-12-11 15:06:56,158 - flwr - DEBUG - gRPC channel closed
 2025-12-11 15:06:56,158 - flwr - INFO - Disconnect and shut down
 2025-12-11 15:06:56,158 - flwr - INFO - Disconnect and shut down
+2026-01-15 10:40:26,798 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-15 10:40:26,799 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-15 10:40:26,870 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-15 10:40:26,871 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 215, in <module>
+2026-01-15 10:40:26,871 - STDERR - ERROR -     root_certificate = Path(f"{ca_cert}").read_bytes()
+2026-01-15 10:40:26,871 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+2026-01-15 10:40:26,871 - STDERR - ERROR -     with self.open(mode='rb') as f:
+2026-01-15 10:40:26,871 - STDERR - ERROR -          ~~~~~~~~~^^^^^^^^^^^
+2026-01-15 10:40:26,871 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore/lib/python3.13/pathlib/_local.py", line 537, in open
+2026-01-15 10:40:26,871 - STDERR - ERROR -     return io.open(self, mode, buffering, encoding, errors, newline)
+2026-01-15 10:40:26,871 - STDERR - ERROR -            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-15 10:40:26,871 - STDERR - ERROR - FileNotFoundError: [Errno 2] No such file or directory: '/certs/rootCA_cert.pem'
+2026-01-16 09:56:24,562 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:56:24,562 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:56:24,633 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-16 09:56:24,634 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 246, in <module>
+2026-01-16 09:56:24,634 - STDERR - ERROR -     (X_train, y_train), (X_test, y_test), time_col, event_col = datasets.load_dataset(config, num_client)
+2026-01-16 09:56:24,634 - STDERR - ERROR -                                                                 ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+2026-01-16 09:56:24,634 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/datasets.py", line 770, in load_dataset
+2026-01-16 09:56:24,634 - STDERR - ERROR -     return load_survival(config, id)
+2026-01-16 09:56:24,634 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/datasets.py", line 590, in load_survival
+2026-01-16 09:56:24,634 - STDERR - ERROR -     if config['survival']['negative_duration_strategy'] == "remove":
+2026-01-16 09:56:24,634 - STDERR - ERROR -        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-16 09:56:24,634 - STDERR - ERROR - KeyError: 'negative_duration_strategy'
+2026-01-16 09:56:59,260 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:56:59,260 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:56:59,291 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 09:56:59,291 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 09:56:59,291 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 09:56:59,305 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 09:56:59,306 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 09:56:59,308 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-16 09:56:59,313 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 09:56:59,315 - flwr - INFO - 
+2026-01-16 09:56:59,315 - flwr - INFO - Received: get_parameters message 18d427ea-e733-4559-aa3d-f7f8f7222fef
+2026-01-16 09:56:59,316 - flwr - INFO - Sent reply
+2026-01-16 09:56:59,319 - flwr - INFO - 
+2026-01-16 09:56:59,319 - flwr - INFO - Received: reconnect message abe607bc-9cd6-45d6-81b4-c53528b0636d
+2026-01-16 09:56:59,320 - flwr - DEBUG - gRPC channel closed
+2026-01-16 09:56:59,321 - flwr - INFO - Disconnect and shut down
+2026-01-16 09:58:09,006 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:58:09,006 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-16 09:58:09,032 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 09:58:09,032 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-16 09:58:09,033 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-16 09:58:09,036 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-16 09:58:09,037 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-16 09:58:09,037 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-16 09:58:09,037 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-16 09:58:09,038 - flwr - INFO - 
+2026-01-16 09:58:09,038 - flwr - INFO - Received: get_parameters message 990cc40c-d405-452a-95e8-379a313d9d3c
+2026-01-16 09:58:09,039 - flwr - INFO - Sent reply
+2026-01-16 09:58:09,041 - flwr - INFO - 
+2026-01-16 09:58:09,041 - flwr - INFO - Received: reconnect message 58b517cb-9b73-4ed8-a8f1-21b4a0e18ddc
+2026-01-16 09:58:09,042 - flwr - DEBUG - gRPC channel closed
+2026-01-16 09:58:09,042 - flwr - INFO - Disconnect and shut down

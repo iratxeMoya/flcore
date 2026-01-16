@@ -48,7 +48,7 @@ def compile_results(experiment_dir: str):
             history = yaml.safe_load(open(os.path.join(fold_dir, "history.yaml"), "r"))
             print('HISTORY:\n', history)
             selection_metric = 'val '+ config['checkpoint_selection_metric']
-            if config['model'] == 'cox':
+            if config['model'] == 'cox' or config['model'] == 'rsf':
                 selection_metric = config['checkpoint_selection_metric']
             best_round= int(np.argmax(history['metrics_distributed'][selection_metric]))
             # client_order = history['metrics_distributed']['per client client_id'][best_round]

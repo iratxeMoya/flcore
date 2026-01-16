@@ -562,8 +562,8 @@ def load_survival(config, id):
     nominal_features = [mdt['name'] for mdt in metadata['entity']['features'] if mdt['dataType'] == 'NOMINAL']
     data_file = Path(config['data_file'])
 
-    time_col = config['cox']['time_col']
-    event_col = config['cox']['event_col']
+    time_col = config['survival']['time_col']
+    event_col = config['survival']['event_col']
 
     if time_col is None or event_col is None:
         if 'outcomes' in metadata['entity'].keys():
@@ -587,16 +587,16 @@ def load_survival(config, id):
     df[features[0]] *= random.uniform(0.7, 1.4)  #! slight random change to CHECK
 
     df_clean = df.replace({None: np.nan}).dropna()
-    if config['negative_duration_strategy'] == "remove":
+    if config['survival']['negative_duration_strategy'] == "remove":
         df_clean = df_clean[df_clean[time_col] >= 0].copy()
-    elif config['negative_duration_strategy'] == "shift":
+    elif config['survival']['negative_duration_strategy'] == "shift":
         min_time = df_clean[time_col].min()
         if min_time < 0:
             df_clean[time_col] = df_clean[time_col] - min_time
-    elif config['negative_duration_strategy'] == "clip":
+    elif config['survival']['negative_duration_strategy'] == "clip":
         df_clean[time_col] = df_clean[time_col].clip(lower=0)
     else:
-        raise ValueError(f"Unknown negative_duration_strategy: {config['negative_duration_strategy']}")
+        raise ValueError(f"Unknown negative_duration_strategy: {config['survival']['negative_duration_strategy']}")
     df_clean = df_clean.reset_index(drop=True)
     
     X = df_clean.drop(columns=[time_col, event_col])
