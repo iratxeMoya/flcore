@@ -1,5 +1,5 @@
 T: 20
-checkpoint_selection_metric: accuracy
+checkpoint_selection_metric: c_index
 dataset: survival
 dropout:
   percentage_drop: 0
@@ -7,17 +7,17 @@ dropout_method: null
 experiment:
   debug: 'True'
   log_path: logs
-  name: experiment_rsf
+  name: experiment_gbs
 experiment_dir: !!python/object/apply:pathlib.PosixPath
 - logs
-- experiment_rsf
+- experiment_gbs
 l1_penalty: 0.0
 local_port: 8081
 metrics_aggregation: weighted_average
 min_available_clients: 2
 min_evaluate_clients: 2
 min_fit_clients: 2
-model: rsf
+model: gbs
 n_estimators: 100
 n_features: 0
 neural_network:

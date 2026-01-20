@@ -40,7 +40,7 @@ class FLClient(fl.client.NumPyClient):
 
         model_kwargs = {k: v for k, v in config.items() if k != "model_type"}
         if self.model_wrapper is None:
-            self.model_wrapper = CoxPHModel(**model_kwargs)
+            self.model_wrapper = GBSModel(**model_kwargs)
             print(f"[Client] Initialized model type from server: gbs")
 
         if parameters:

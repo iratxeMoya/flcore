@@ -201,3 +201,15 @@ class GBSModel(BaseSurvivalModel):
 
     def predict_risk(self, X: np.ndarray) -> np.ndarray:
         return self.model.predict(X)
+
+    def save_model(self, path: str):
+        """Save the model parameters to the specified path."""
+        with open(path, 'wb') as f:
+            import pickle
+            pickle.dump(self.get_parameters(), f)
+
+    def load_model(self, path: str):
+        """Load the model parameters from the specified path."""
+        with open(path, 'rb') as f:
+            import pickle
+            self.set_parameters(pickle.load(f))

@@ -869,3 +869,1650 @@
 2026-01-16 11:54:42,940 - flwr - INFO - Disconnect and shut down
 2026-01-16 11:54:42,941 - flwr - DEBUG - gRPC channel closed
 2026-01-16 11:54:42,941 - flwr - INFO - Disconnect and shut down
+2026-01-20 09:46:10,394 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:46:10,394 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:46:10,457 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:10,457 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:10,457 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:46:10,461 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:46:10,462 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:46:10,463 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:46:10,467 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:46:10,469 - flwr - INFO - 
+2026-01-20 09:46:10,469 - flwr - INFO - Received: get_parameters message a82bed1e-03cb-4478-8f42-f63be8823e73
+2026-01-20 09:46:10,469 - flwr - INFO - Sent reply
+2026-01-20 09:46:16,266 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:46:16,266 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:46:16,287 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:16,288 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:16,288 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:46:16,292 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:46:16,293 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:46:16,293 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:46:16,293 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:46:16,298 - flwr - INFO - 
+2026-01-20 09:46:16,298 - flwr - INFO - Received: train message 54b55325-803b-4092-b7cd-e0750db5cf61
+2026-01-20 09:46:16,298 - flwr - INFO - 
+2026-01-20 09:46:16,298 - flwr - INFO - Received: train message 2a6e0379-4231-4bff-9e02-274332d48cb4
+2026-01-20 09:46:16,299 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 43, in fit
+    self.model_wrapper = CoxPHModel(**model_kwargs)
+                         ^^^^^^^^^^
+NameError: name 'CoxPHModel' is not defined
+2026-01-20 09:46:16,298 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 128, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 224, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 227, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 43, in fit
+    self.model_wrapper = CoxPHModel(**model_kwargs)
+                         ^^^^^^^^^^
+NameError: name 'CoxPHModel' is not defined
+2026-01-20 09:46:16,332 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:46:16,333 - STDOUT - INFO - Attempt 1 failed: name 'CoxPHModel' is not defined
+2026-01-20 09:46:16,495 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:46:16,495 - STDOUT - INFO - Attempt 1 failed: name 'CoxPHModel' is not defined
+2026-01-20 09:46:18,333 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:18,333 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:18,333 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:46:18,335 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:46:18,336 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:46:18,337 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:46:18,337 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:46:18,496 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:18,496 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:18,496 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:46:18,498 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:46:18,498 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:46:18,499 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:46:18,500 - flwr - INFO - 
+2026-01-20 09:46:18,500 - flwr - INFO - 
+2026-01-20 09:46:18,501 - flwr - INFO - Received: evaluate message 61b072ae-b0dc-4bf5-9e98-1cf6d0a99aec
+2026-01-20 09:46:18,501 - flwr - INFO - Received: evaluate message 19e97476-4f45-4e75-a78d-6a5d71b00e0e
+2026-01-20 09:46:18,501 - STDOUT - INFO - [GBSModel] Initializing FPBoost with n_estimators=100, lr=0.01
+2026-01-20 09:46:18,501 - STDOUT - INFO - [GBSModel] Initializing FPBoost with n_estimators=100, lr=0.01
+2026-01-20 09:46:18,501 - STDOUT - INFO - [Client] Initialized model type from server (evaluate): gbs
+2026-01-20 09:46:18,501 - STDOUT - INFO - [Client] Initialized model type from server (evaluate): gbs
+2026-01-20 09:46:18,502 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 66, in evaluate
+    metrics = self.model_wrapper.evaluate(data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/model.py", line 62, in evaluate
+    pred_risk = self.model.predict(X_test)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/fpboost/models.py", line 271, in predict
+    cum_hazard = self._predict_cumulative_hazard(X, self._base_timeline)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/fpboost/models.py", line 277, in _predict_cumulative_hazard
+    check_is_fitted(self, "unique_times_")
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1461, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This FPBoost instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2026-01-20 09:46:18,502 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 66, in evaluate
+    metrics = self.model_wrapper.evaluate(data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/model.py", line 62, in evaluate
+    pred_risk = self.model.predict(X_test)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/fpboost/models.py", line 271, in predict
+    cum_hazard = self._predict_cumulative_hazard(X, self._base_timeline)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/fpboost/models.py", line 277, in _predict_cumulative_hazard
+    check_is_fitted(self, "unique_times_")
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1461, in check_is_fitted
+    raise NotFittedError(msg % {"name": type(estimator).__name__})
+sklearn.exceptions.NotFittedError: This FPBoost instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2026-01-20 09:46:18,540 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:46:18,540 - STDOUT - INFO - Attempt 2 failed: This FPBoost instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2026-01-20 09:46:18,702 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:46:18,702 - STDOUT - INFO - Attempt 2 failed: This FPBoost instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator.
+2026-01-20 09:46:20,540 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:20,541 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:20,541 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:46:20,543 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:46:20,543 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:46:20,544 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:46:20,544 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:46:20,703 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:20,703 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:46:20,703 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:46:20,704 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:46:20,706 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:46:20,707 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:46:20,708 - flwr - INFO - 
+2026-01-20 09:46:20,708 - flwr - INFO - Received: train message a80c78c1-5b37-460c-b6a4-8c69696e8eaa
+2026-01-20 09:46:20,708 - flwr - INFO - 
+2026-01-20 09:46:20,708 - flwr - INFO - Received: train message 018379aa-1c4a-4dff-9797-c8e9767fe800
+2026-01-20 09:46:24,755 - flwr - INFO - Sent reply
+2026-01-20 09:46:24,761 - flwr - INFO - Sent reply
+2026-01-20 09:46:24,823 - flwr - INFO - 
+2026-01-20 09:46:24,823 - flwr - INFO - Received: evaluate message 644f2600-7820-4f3f-b5d1-90832b604ef6
+2026-01-20 09:46:24,825 - flwr - INFO - 
+2026-01-20 09:46:24,825 - flwr - INFO - Received: evaluate message b3b2aab0-644d-42fd-bddb-10a7f9de4c93
+2026-01-20 09:46:25,304 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.35845213849287166, 'brier_score': 0.24368925832983307, 'ibs': 0.20889445732375478, 'n_estimators': 100}
+2026-01-20 09:46:25,304 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:46:25,403 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:46:25,403 - STDOUT - INFO - Attempt 3 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:46:25,403 - STDOUT - INFO - All connection attempts failed.
+2026-01-20 09:46:25,403 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-20 09:46:25,403 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 272, in <module>
+2026-01-20 09:46:25,403 - STDERR - ERROR - fl.client.start_numpy_client(
+2026-01-20 09:46:25,404 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 625, in start_numpy_client
+2026-01-20 09:46:25,404 - STDERR - ERROR - start_client(
+2026-01-20 09:46:25,404 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+2026-01-20 09:46:25,404 - STDERR - ERROR - start_client_internal(
+2026-01-20 09:46:25,404 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 474, in start_client_internal
+2026-01-20 09:46:25,404 - STDERR - ERROR - raise ex
+2026-01-20 09:46:25,404 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+2026-01-20 09:46:25,404 - STDERR - ERROR - reply_message = client_app(message=message, context=context)
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,404 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+2026-01-20 09:46:25,405 - STDERR - ERROR - return self._call(message, context)
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,405 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+2026-01-20 09:46:25,406 - STDERR - ERROR - out_message = handle_legacy_message_from_msgtype(
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,406 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+2026-01-20 09:46:25,407 - STDERR - ERROR - evaluate_res = maybe_call_evaluate(
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+2026-01-20 09:46:25,407 - STDERR - ERROR - return client.evaluate(evaluate_ins)
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,407 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+2026-01-20 09:46:25,408 - STDERR - ERROR - results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,408 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+2026-01-20 09:46:25,409 - STDERR - ERROR - self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,409 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - ^
+2026-01-20 09:46:25,410 - STDERR - ERROR - AttributeError
+2026-01-20 09:46:25,410 - STDERR - ERROR - :
+2026-01-20 09:46:25,410 - STDERR - ERROR - 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:49:56,048 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:49:56,048 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:49:56,070 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:49:56,070 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:49:56,071 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:49:56,075 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:49:56,076 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:49:56,076 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:49:56,076 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:49:56,077 - flwr - INFO - 
+2026-01-20 09:49:56,077 - flwr - INFO - Received: get_parameters message 30c6515e-24b8-4650-91a5-117a9cb86496
+2026-01-20 09:49:56,078 - flwr - INFO - Sent reply
+2026-01-20 09:49:59,060 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:49:59,060 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:49:59,080 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:49:59,081 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:49:59,081 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:49:59,084 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:49:59,085 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:49:59,085 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:49:59,086 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:49:59,087 - flwr - INFO - 
+2026-01-20 09:49:59,087 - flwr - INFO - Received: train message 20492709-e1c3-4bcc-9444-2ace490df4dd
+2026-01-20 09:49:59,087 - flwr - INFO - 
+2026-01-20 09:49:59,087 - flwr - INFO - Received: train message efefbc93-5fda-4f2d-b8ee-b1a182b88262
+2026-01-20 09:49:59,088 - STDOUT - INFO - [GBSModel] Initializing FPBoost with n_estimators=100, lr=0.01
+2026-01-20 09:49:59,088 - STDOUT - INFO - [GBSModel] Initializing FPBoost with n_estimators=100, lr=0.01
+2026-01-20 09:49:59,088 - STDOUT - INFO - [Client] Initialized model type from server: gbs
+2026-01-20 09:49:59,088 - STDOUT - INFO - [Client] Initialized model type from server: gbs
+2026-01-20 09:50:02,644 - flwr - INFO - Sent reply
+2026-01-20 09:50:02,681 - flwr - INFO - Sent reply
+2026-01-20 09:50:02,743 - flwr - INFO - 
+2026-01-20 09:50:02,743 - flwr - INFO - Received: evaluate message cbc695cb-1776-43a5-9c63-46a91dfa56ac
+2026-01-20 09:50:02,746 - flwr - INFO - 
+2026-01-20 09:50:02,746 - flwr - INFO - Received: evaluate message 31950803-5d9b-46e4-b260-c01691ab81ce
+2026-01-20 09:50:03,213 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.4296875, 'brier_score': 0.28250411693966065, 'ibs': 0.21703969782002158, 'n_estimators': 100}
+2026-01-20 09:50:03,214 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:03,219 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.40408163265306124, 'brier_score': 0.206925191245724, 'ibs': 0.1918955291537842, 'n_estimators': 100}
+2026-01-20 09:50:03,220 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:03,341 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:50:03,341 - STDOUT - INFO - Attempt 1 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:03,372 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:50:03,372 - STDOUT - INFO - Attempt 1 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:05,342 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:05,342 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:05,342 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:50:05,343 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:50:05,344 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:50:05,345 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:50:05,345 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:50:05,372 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:05,372 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:05,373 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:50:05,374 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:50:05,375 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:50:05,376 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:50:05,376 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:50:05,382 - flwr - INFO - 
+2026-01-20 09:50:05,382 - flwr - INFO - Received: train message 0fd06fc1-7d25-427f-a647-f4e0de7348c0
+2026-01-20 09:50:05,384 - flwr - INFO - 
+2026-01-20 09:50:05,384 - flwr - INFO - Received: train message 3f5887ad-9807-4251-a7c6-539f5a0d5ca8
+2026-01-20 09:50:08,964 - flwr - INFO - Sent reply
+2026-01-20 09:50:08,969 - flwr - INFO - Sent reply
+2026-01-20 09:50:09,024 - flwr - INFO - 
+2026-01-20 09:50:09,024 - flwr - INFO - Received: evaluate message 1466c539-576c-4628-aea7-53a8acfe3ab2
+2026-01-20 09:50:09,025 - flwr - INFO - 
+2026-01-20 09:50:09,026 - flwr - INFO - Received: evaluate message 77471693-c7d1-4270-8e4e-f4de9d2faecd
+2026-01-20 09:50:09,499 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.40408163265306124, 'brier_score': 0.206925191245724, 'ibs': 0.1918955291537842, 'n_estimators': 100}
+2026-01-20 09:50:09,499 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:09,515 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.4296875, 'brier_score': 0.28250411693966065, 'ibs': 0.21703969782002158, 'n_estimators': 100}
+2026-01-20 09:50:09,515 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:09,633 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:50:09,633 - STDOUT - INFO - Attempt 2 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:09,664 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:50:09,664 - STDOUT - INFO - Attempt 2 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:11,634 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:11,634 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:11,635 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:50:11,636 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:50:11,637 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:50:11,638 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:50:11,638 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:50:11,664 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:11,665 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:50:11,665 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:50:11,666 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:50:11,667 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:50:11,668 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:50:11,668 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:50:11,671 - flwr - INFO - 
+2026-01-20 09:50:11,672 - flwr - INFO - Received: train message 80574c66-3d37-4c75-90bc-bd5290aeea40
+2026-01-20 09:50:11,674 - flwr - INFO - 
+2026-01-20 09:50:11,674 - flwr - INFO - Received: train message a3a4221b-7b4c-4ed1-a3f8-ef7ba667cf57
+2026-01-20 09:50:15,256 - flwr - INFO - Sent reply
+2026-01-20 09:50:15,291 - flwr - INFO - Sent reply
+2026-01-20 09:50:15,345 - flwr - INFO - 
+2026-01-20 09:50:15,346 - flwr - INFO - Received: evaluate message f17a0c34-4fb5-4d9b-97a6-e318432a5f87
+2026-01-20 09:50:15,346 - flwr - INFO - 
+2026-01-20 09:50:15,346 - flwr - INFO - Received: evaluate message 69065318-53f6-4489-9146-585183fda58f
+2026-01-20 09:50:15,823 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.40408163265306124, 'brier_score': 0.206925191245724, 'ibs': 0.1918955291537842, 'n_estimators': 100}
+2026-01-20 09:50:15,823 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:15,831 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.4296875, 'brier_score': 0.28250411693966065, 'ibs': 0.21703969782002158, 'n_estimators': 100}
+2026-01-20 09:50:15,831 - flwr - ERROR - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+    evaluate_res = maybe_call_evaluate(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+    return client.evaluate(evaluate_ins)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+    results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+    self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:15,833 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:50:15,833 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:50:15,833 - STDOUT - INFO - Attempt 3 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:15,833 - STDOUT - INFO - Attempt 3 failed: 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:15,833 - STDOUT - INFO - All connection attempts failed.
+2026-01-20 09:50:15,833 - STDOUT - INFO - All connection attempts failed.
+2026-01-20 09:50:15,834 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-20 09:50:15,834 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 272, in <module>
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/client_cmd.py", line 272, in <module>
+2026-01-20 09:50:15,834 - STDERR - ERROR - fl.client.start_numpy_client(
+2026-01-20 09:50:15,834 - STDERR - ERROR - fl.client.start_numpy_client(
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 625, in start_numpy_client
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 625, in start_numpy_client
+2026-01-20 09:50:15,834 - STDERR - ERROR - start_client(
+2026-01-20 09:50:15,834 - STDERR - ERROR - start_client(
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 184, in start_client
+2026-01-20 09:50:15,834 - STDERR - ERROR - start_client_internal(
+2026-01-20 09:50:15,834 - STDERR - ERROR - start_client_internal(
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 474, in start_client_internal
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 474, in start_client_internal
+2026-01-20 09:50:15,834 - STDERR - ERROR - raise ex
+2026-01-20 09:50:15,834 - STDERR - ERROR - raise ex
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+2026-01-20 09:50:15,834 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/client/app.py", line 467, in start_client_internal
+2026-01-20 09:50:15,834 - STDERR - ERROR - reply_message = client_app(message=message, context=context)
+2026-01-20 09:50:15,835 - STDERR - ERROR - reply_message = client_app(message=message, context=context)
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,835 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 143, in __call__
+2026-01-20 09:50:15,836 - STDERR - ERROR - return self._call(message, context)
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - return self._call(message, context)
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,836 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - out_message = handle_legacy_message_from_msgtype(
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/clientapp/client_app.py", line 127, in ffn
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - out_message = handle_legacy_message_from_msgtype(
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,837 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - evaluate_res = maybe_call_evaluate(
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 135, in handle_legacy_message_from_msgtype
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - evaluate_res = maybe_call_evaluate(
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,838 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - return client.evaluate(evaluate_ins)
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/client.py", line 244, in maybe_call_evaluate
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - return client.evaluate(evaluate_ins)
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,839 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 251, in _evaluate
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - results = self.numpy_client.evaluate(parameters, ins.config)  # type: ignore
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,840 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,841 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/gbs/client.py", line 71, in evaluate
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - self.model_wrapper.save_model(f"{self.saving_path}/models/gbs.pkl")
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,842 - STDERR - ERROR - AttributeError
+2026-01-20 09:50:15,842 - STDERR - ERROR - :
+2026-01-20 09:50:15,842 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - ^
+2026-01-20 09:50:15,843 - STDERR - ERROR - AttributeError
+2026-01-20 09:50:15,843 - STDERR - ERROR - :
+2026-01-20 09:50:15,843 - STDERR - ERROR - 'GBSModel' object has no attribute 'save_model'
+2026-01-20 09:51:03,078 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:51:03,078 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:51:03,097 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:51:03,097 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:51:03,098 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:51:03,101 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:51:03,102 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:51:03,102 - flwr - DEBUG - ChannelConnectivity.CONNECTING
+2026-01-20 09:51:03,102 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:51:03,103 - flwr - INFO - 
+2026-01-20 09:51:03,103 - flwr - INFO - Received: get_parameters message 897ec2b2-b7d3-4420-a426-acabfac89f04
+2026-01-20 09:51:03,104 - flwr - INFO - Sent reply
+2026-01-20 09:51:05,452 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:51:05,452 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-20 09:51:05,471 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:51:05,471 - flwr - WARNING - DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-20 09:51:05,471 - flwr - DEBUG - Using InMemoryObjectStore
+2026-01-20 09:51:05,474 - flwr - DEBUG - Opened insecure gRPC connection (no certificates were passed)
+2026-01-20 09:51:05,475 - flwr - DEBUG - ChannelConnectivity.IDLE
+2026-01-20 09:51:05,476 - flwr - DEBUG - ChannelConnectivity.READY
+2026-01-20 09:51:05,477 - flwr - INFO - 
+2026-01-20 09:51:05,477 - flwr - INFO - Received: train message ff920f2c-0576-4816-a10c-8bd6a7409bcb
+2026-01-20 09:51:05,477 - flwr - INFO - 
+2026-01-20 09:51:05,477 - flwr - INFO - Received: train message 96474e99-44de-4bed-a6a1-f9179d3a100c
+2026-01-20 09:51:05,477 - STDOUT - INFO - [GBSModel] Initializing FPBoost with n_estimators=100, lr=0.01
+2026-01-20 09:51:05,477 - STDOUT - INFO - [GBSModel] Initializing FPBoost with n_estimators=100, lr=0.01
+2026-01-20 09:51:05,478 - STDOUT - INFO - [Client] Initialized model type from server: gbs
+2026-01-20 09:51:05,478 - STDOUT - INFO - [Client] Initialized model type from server: gbs
+2026-01-20 09:51:09,059 - flwr - INFO - Sent reply
+2026-01-20 09:51:09,089 - flwr - INFO - Sent reply
+2026-01-20 09:51:09,148 - flwr - INFO - 
+2026-01-20 09:51:09,148 - flwr - INFO - Received: evaluate message 7a06d052-cee5-4433-95f1-5355fdf0ff5f
+2026-01-20 09:51:09,150 - flwr - INFO - 
+2026-01-20 09:51:09,150 - flwr - INFO - Received: evaluate message 247b2eb4-86b0-4db6-8b05-9d9454d1bbce
+2026-01-20 09:51:09,620 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.4419551934826884, 'brier_score': 0.2525627218354713, 'ibs': 0.21014521909483064, 'n_estimators': 100}
+2026-01-20 09:51:09,626 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.34095427435387676, 'brier_score': 0.241446535772456, 'ibs': 0.20390986826979746, 'n_estimators': 100}
+2026-01-20 09:51:09,635 - flwr - INFO - Sent reply
+2026-01-20 09:51:09,641 - flwr - INFO - Sent reply
+2026-01-20 09:51:09,645 - flwr - INFO - 
+2026-01-20 09:51:09,645 - flwr - INFO - Received: train message bc216caf-af2e-4fe0-8d05-868c8645ce12
+2026-01-20 09:51:09,646 - flwr - INFO - 
+2026-01-20 09:51:09,646 - flwr - INFO - Received: train message 60c22ba5-0e11-4310-88f2-cba1eabecd37
+2026-01-20 09:51:13,039 - flwr - INFO - Sent reply
+2026-01-20 09:51:13,059 - flwr - INFO - Sent reply
+2026-01-20 09:51:13,111 - flwr - INFO - 
+2026-01-20 09:51:13,111 - flwr - INFO - Received: evaluate message 56ab449a-20de-415e-bbdd-77cf3787c032
+2026-01-20 09:51:13,111 - flwr - INFO - 
+2026-01-20 09:51:13,112 - flwr - INFO - Received: evaluate message f5f07729-4ea5-4c4d-ae6b-7b744dff039f
+2026-01-20 09:51:13,586 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.3966202783300199, 'brier_score': 0.24135402313420135, 'ibs': 0.20545654291045348, 'n_estimators': 100}
+2026-01-20 09:51:13,591 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.3604887983706721, 'brier_score': 0.2511464099315705, 'ibs': 0.20763513534778738, 'n_estimators': 100}
+2026-01-20 09:51:13,601 - flwr - INFO - Sent reply
+2026-01-20 09:51:13,605 - flwr - INFO - Sent reply
+2026-01-20 09:51:13,609 - flwr - INFO - 
+2026-01-20 09:51:13,609 - flwr - INFO - 
+2026-01-20 09:51:13,609 - flwr - INFO - Received: train message e7565d03-7348-4a1e-a401-b6a86f58a4d0
+2026-01-20 09:51:13,609 - flwr - INFO - Received: train message 730f4e74-a7eb-44ef-9f07-ef7bf235a823
+2026-01-20 09:51:17,007 - flwr - INFO - Sent reply
+2026-01-20 09:51:17,054 - flwr - INFO - Sent reply
+2026-01-20 09:51:17,106 - flwr - INFO - 
+2026-01-20 09:51:17,106 - flwr - INFO - Received: evaluate message 7ffd09cb-9ce2-4857-af74-f79c3901e0be
+2026-01-20 09:51:17,107 - flwr - INFO - 
+2026-01-20 09:51:17,107 - flwr - INFO - Received: evaluate message 911cf148-5e07-45b8-ae13-ac13c37c1a43
+2026-01-20 09:51:17,582 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.3966202783300199, 'brier_score': 0.24135402313420135, 'ibs': 0.20545654291045348, 'n_estimators': 100}
+2026-01-20 09:51:17,592 - STDOUT - INFO - [GBSModel] Evaluation results: {'c_index': 0.3604887983706721, 'brier_score': 0.2511464099315705, 'ibs': 0.20763513534778738, 'n_estimators': 100}
+2026-01-20 09:51:17,596 - flwr - INFO - Sent reply
+2026-01-20 09:51:17,606 - flwr - INFO - Sent reply
+2026-01-20 09:51:17,609 - flwr - INFO - 
+2026-01-20 09:51:17,609 - flwr - INFO - 
+2026-01-20 09:51:17,609 - flwr - INFO - Received: reconnect message db8436cb-e571-4233-9d43-7a0458987a74
+2026-01-20 09:51:17,609 - flwr - INFO - Received: reconnect message ee528fa5-843b-4560-b27e-f2dc00275a0d
+2026-01-20 09:51:17,610 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:51:17,610 - flwr - DEBUG - gRPC channel closed
+2026-01-20 09:51:17,610 - flwr - INFO - Disconnect and shut down
+2026-01-20 09:51:17,610 - flwr - INFO - Disconnect and shut down
