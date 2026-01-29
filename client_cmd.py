@@ -98,6 +98,7 @@ if __name__ == "__main__":
 
 #    config["metadata_file"] = os.path.join(dir_name_parent,"metadata.json")
     pattern = "*.json"
+    print(os.path.join(est,pattern))
     metadata_files = glob.glob(os.path.join(est,pattern))
     config["metadata_file"] = metadata_files[-1]
 

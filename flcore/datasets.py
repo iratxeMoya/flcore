@@ -626,6 +626,7 @@ def load_dt4h(config,id):
 
     data_file = Path(config['data_file'])
     dat = pd.read_parquet(data_file)
+    print(dat)
 
     dat_len = len(dat)
     # Numerical variables
@@ -755,17 +756,23 @@ def convert_dataset(config):
 
 def load_dataset(config, id=None):
     if config["dataset"] == "mnist":
-        return load_mnist(id, config["num_clients"]), None, None
+        (X_train, y_train), (X_test, y_test) = load_mnist(id, config["num_clients"])
+        return (X_train, y_train), (X_test, y_test), None, None
     elif config["dataset"] == "cvd":
-        return load_cvd(config["data_path"], id), None, None
+        (X_train, y_train), (X_test, y_test) = load_cvd(config["data_path"], id)
+        return (X_train, y_train), (X_test, y_test), None, None
     elif config["dataset"] == "ukbb_cvd":
-        return load_ukbb_cvd(config["data_path"], id, config), None, None
+        (X_train, y_train), (X_test, y_test) = load_ukbb_cvd(config["data_path"], id, config)
+        return (X_train, y_train), (X_test, y_test), None, None
     elif config["dataset"] == "kaggle_hf":
-        return load_kaggle_hf(config["data_path"], id, config), None, None
+        (X_train, y_train), (X_test, y_test) = load_kaggle_hf(config["data_path"], id, config)
+        return (X_train, y_train), (X_test, y_test), None, None
     elif config["dataset"] == "libsvm":
-        return load_libsvm(config, id), None, None
+        (X_train, y_train), (X_test, y_test) = load_libsvm(config, id)
+        return (X_train, y_train), (X_test, y_test), None, None
     elif config["dataset"] == "dt4h_format":
-        return load_dt4h(config, id), None, None
+        (X_train, y_train), (X_test, y_test) = load_dt4h(config, id)
+        return (X_train, y_train), (X_test, y_test), None, None
     elif config["dataset"] == "survival":
         return load_survival(config, id)
     else:

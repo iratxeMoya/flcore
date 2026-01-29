@@ -733,3 +733,515 @@ than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
 2026-01-20 09:51:17,613 - STDOUT - INFO -          (2, 0.20654583912912045),
 2026-01-20 09:51:17,613 - STDOUT - INFO -          (3, 0.20654583912912045)],
 2026-01-20 09:51:17,613 - STDOUT - INFO -  'n_estimators': [(1, 100.0), (2, 100.0), (3, 100.0)]}
+2026-01-27 22:29:30,073 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-27 22:29:30,073 - root - DEBUG - Starting Flower server...
+2026-01-27 22:29:30,073 - STDOUT - INFO - ELSE
+2026-01-27 22:29:30,079 - STDOUT - INFO - 
+2026-01-27 22:29:30,080 - STDOUT - INFO - ============================================================
+2026-01-27 22:29:30,080 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-27 22:29:30,080 - STDOUT - INFO - ============================================================
+2026-01-27 22:29:30,080 - STDOUT - INFO - Training method: bagging
+2026-01-27 22:29:30,080 - STDOUT - INFO - Total rounds: 3
+2026-01-27 22:29:30,080 - STDOUT - INFO - Trees per round: 33
+2026-01-27 22:29:30,080 - STDOUT - INFO - Total trees (final): 99
+2026-01-27 22:29:30,080 - STDOUT - INFO - Number of clients: 2
+2026-01-27 22:29:30,080 - STDOUT - INFO - XGBoost params: {'objective': 'multi:softmax', 'eta': 0.1, 'max_depth': 6, 'eval_metric': 'mlogloss', 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8}
+2026-01-27 22:29:30,080 - STDOUT - INFO - ============================================================
+2026-01-27 22:29:30,080 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-27 22:29:30,080 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-27 22:29:30,080 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'objective': 'multi:softmax', 'eta': 0.1, 'max_depth': 6, 'eval_metric': 'mlogloss', 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8}
+2026-01-27 22:29:30,080 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-27 22:29:30,081 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-27 22:29:30,107 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-27 22:29:30,107 - flwr - INFO - [INIT]
+2026-01-27 22:29:30,107 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-27 22:29:30,109 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-27 22:29:30,109 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-27 22:29:30,109 - flwr - INFO - 
+2026-01-27 22:29:30,109 - flwr - INFO - [ROUND 1]
+2026-01-28 15:31:12,374 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-28 15:31:12,374 - root - DEBUG - Starting Flower server...
+2026-01-28 15:31:12,374 - STDOUT - INFO - ELSE
+2026-01-28 15:31:12,386 - STDOUT - INFO - 
+2026-01-28 15:31:12,386 - STDOUT - INFO - ============================================================
+2026-01-28 15:31:12,387 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-28 15:31:12,387 - STDOUT - INFO - ============================================================
+2026-01-28 15:31:12,387 - STDOUT - INFO - Training method: bagging
+2026-01-28 15:31:12,387 - STDOUT - INFO - Total rounds: 3
+2026-01-28 15:31:12,387 - STDOUT - INFO - Trees per round: 33
+2026-01-28 15:31:12,387 - STDOUT - INFO - Total trees (final): 99
+2026-01-28 15:31:12,387 - STDOUT - INFO - Number of clients: 2
+2026-01-28 15:31:12,387 - STDOUT - INFO - XGBoost params: {'objective': 'multi:softmax', 'eta': 0.1, 'max_depth': 6, 'eval_metric': 'mlogloss', 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8}
+2026-01-28 15:31:12,387 - STDOUT - INFO - ============================================================
+2026-01-28 15:31:12,387 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-28 15:31:12,387 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-28 15:31:12,387 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'objective': 'multi:softmax', 'eta': 0.1, 'max_depth': 6, 'eval_metric': 'mlogloss', 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8}
+2026-01-28 15:31:12,387 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-28 15:31:12,387 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-28 15:31:12,388 - STDERR - ERROR - Port in server address LOCALHOST:8081 is already in use.
+2026-01-28 15:31:58,113 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-28 15:31:58,113 - root - DEBUG - Starting Flower server...
+2026-01-28 15:31:58,113 - STDOUT - INFO - ELSE
+2026-01-28 15:31:58,116 - STDOUT - INFO - 
+2026-01-28 15:31:58,117 - STDOUT - INFO - ============================================================
+2026-01-28 15:31:58,117 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-28 15:31:58,117 - STDOUT - INFO - ============================================================
+2026-01-28 15:31:58,117 - STDOUT - INFO - Training method: bagging
+2026-01-28 15:31:58,117 - STDOUT - INFO - Total rounds: 3
+2026-01-28 15:31:58,117 - STDOUT - INFO - Trees per round: 33
+2026-01-28 15:31:58,117 - STDOUT - INFO - Total trees (final): 99
+2026-01-28 15:31:58,117 - STDOUT - INFO - Number of clients: 2
+2026-01-28 15:31:58,117 - STDOUT - INFO - XGBoost params: {'objective': 'multi:softmax', 'eta': 0.1, 'max_depth': 6, 'eval_metric': 'mlogloss', 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8}
+2026-01-28 15:31:58,117 - STDOUT - INFO - ============================================================
+2026-01-28 15:31:58,117 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-28 15:31:58,117 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-28 15:31:58,117 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'objective': 'multi:softmax', 'eta': 0.1, 'max_depth': 6, 'eval_metric': 'mlogloss', 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8}
+2026-01-28 15:31:58,117 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-28 15:31:58,117 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-28 15:31:58,126 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-28 15:31:58,126 - flwr - INFO - [INIT]
+2026-01-28 15:31:58,126 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-28 15:31:58,126 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-28 15:31:58,126 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-28 15:31:58,126 - flwr - INFO - 
+2026-01-28 15:31:58,126 - flwr - INFO - [ROUND 1]
+2026-01-28 15:46:32,249 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:46:32,263 - flwr - INFO - aggregate_fit: received 0 results and 2 failures
+2026-01-28 15:46:34,460 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-28 15:46:34,463 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-28 15:46:34,463 - STDOUT - INFO - [Round 1] Evaluation - Loss: 0.0000, Metrics: {}
+2026-01-28 15:46:34,463 - flwr - INFO - 
+2026-01-28 15:46:34,463 - flwr - INFO - [ROUND 2]
+2026-01-28 15:46:34,463 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:46:34,467 - flwr - INFO - aggregate_fit: received 0 results and 2 failures
+2026-01-28 15:46:36,667 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-28 15:46:36,672 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-28 15:46:36,672 - STDOUT - INFO - [Round 2] Evaluation - Loss: 0.0000, Metrics: {}
+2026-01-28 15:46:36,672 - flwr - INFO - 
+2026-01-28 15:46:36,672 - flwr - INFO - [ROUND 3]
+2026-01-28 15:46:36,672 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:46:36,675 - flwr - INFO - aggregate_fit: received 0 results and 2 failures
+2026-01-28 15:49:46,824 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-28 15:49:46,824 - root - DEBUG - Starting Flower server...
+2026-01-28 15:49:46,824 - STDOUT - INFO - ELSE
+2026-01-28 15:49:46,828 - STDOUT - INFO - [XGBoost Config] Binary classification
+2026-01-28 15:49:46,828 - STDOUT - INFO - 
+2026-01-28 15:49:46,828 - STDOUT - INFO - ============================================================
+2026-01-28 15:49:46,828 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-28 15:49:46,828 - STDOUT - INFO - ============================================================
+2026-01-28 15:49:46,828 - STDOUT - INFO - Task type: BINARY
+2026-01-28 15:49:46,828 - STDOUT - INFO - Training method: bagging
+2026-01-28 15:49:46,828 - STDOUT - INFO - Total rounds: 3
+2026-01-28 15:49:46,828 - STDOUT - INFO - Trees per round: 33
+2026-01-28 15:49:46,828 - STDOUT - INFO - Total trees (final): 99
+2026-01-28 15:49:46,828 - STDOUT - INFO - Number of clients: 2
+2026-01-28 15:49:46,828 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'binary:logistic', 'eval_metric': 'auc'}
+2026-01-28 15:49:46,828 - STDOUT - INFO - ============================================================
+2026-01-28 15:49:46,828 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-28 15:49:46,828 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-28 15:49:46,828 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'binary:logistic', 'eval_metric': 'auc'}
+2026-01-28 15:49:46,828 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-28 15:49:46,829 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-28 15:49:46,833 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-28 15:49:46,833 - flwr - INFO - [INIT]
+2026-01-28 15:49:46,834 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-28 15:49:46,834 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-28 15:49:46,834 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-28 15:49:46,834 - flwr - INFO - 
+2026-01-28 15:49:46,834 - flwr - INFO - [ROUND 1]
+2026-01-28 15:49:55,699 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:49:55,765 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-28 15:49:55,765 - STDOUT - INFO - 
+2026-01-28 15:49:55,765 - STDOUT - INFO - [Round 1] Aggregating 2 client models...
+2026-01-28 15:49:55,921 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-28 15:49:55,922 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_trees': 33.0, 'num_examples': 2639.0}
+2026-01-28 15:49:55,923 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-28 15:49:55,923 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-28 15:49:55,941 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-28 15:49:55,942 - STDERR - ERROR - Traceback (most recent call last):
+2026-01-28 15:49:55,942 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/server_cmd.py", line 205, in <module>
+2026-01-28 15:49:55,942 - STDERR - ERROR - history = fl.server.start_server(
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR - ^
+2026-01-28 15:49:55,942 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/compat/server/app.py", line 163, in start_server
+2026-01-28 15:49:55,943 - STDERR - ERROR - hist = run_fl(
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/server/server.py", line 487, in run_fl
+2026-01-28 15:49:55,943 - STDERR - ERROR - hist, elapsed_time = server.fit(
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,943 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/server/server.py", line 144, in fit
+2026-01-28 15:49:55,944 - STDERR - ERROR - res_fed = self.evaluate_round(server_round=current_round, timeout=timeout)
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,944 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,945 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR -   File "/home/iratxe/miniconda3/envs/flcore_py311/lib/python3.11/site-packages/flwr/server/server.py", line 200, in evaluate_round
+2026-01-28 15:49:55,946 - STDERR - ERROR - ] = self.strategy.aggregate_evaluate(server_round, results, failures)
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,946 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,947 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR - ^
+2026-01-28 15:49:55,948 - STDERR - ERROR -   File "/home/iratxe/Documentos/AI4HF/flcore/flcore/models/xgb_irh/server.py", line 192, in aggregate_evaluate
+2026-01-28 15:49:55,948 - STDERR - ERROR - metrics_aggregated[key] += value * eval_res.num_examples / total_examples
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,948 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ^
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - ~
+2026-01-28 15:49:55,949 - STDERR - ERROR - TypeError
+2026-01-28 15:49:55,949 - STDERR - ERROR - :
+2026-01-28 15:49:55,949 - STDERR - ERROR - unsupported operand type(s) for /: 'str' and 'int'
+2026-01-28 15:53:40,290 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-28 15:53:40,290 - root - DEBUG - Starting Flower server...
+2026-01-28 15:53:40,290 - STDOUT - INFO - ELSE
+2026-01-28 15:53:40,293 - STDOUT - INFO - [XGBoost Config] Binary classification
+2026-01-28 15:53:40,294 - STDOUT - INFO - 
+2026-01-28 15:53:40,294 - STDOUT - INFO - ============================================================
+2026-01-28 15:53:40,294 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-28 15:53:40,294 - STDOUT - INFO - ============================================================
+2026-01-28 15:53:40,294 - STDOUT - INFO - Task type: BINARY
+2026-01-28 15:53:40,294 - STDOUT - INFO - Training method: bagging
+2026-01-28 15:53:40,294 - STDOUT - INFO - Total rounds: 3
+2026-01-28 15:53:40,294 - STDOUT - INFO - Trees per round: 33
+2026-01-28 15:53:40,294 - STDOUT - INFO - Total trees (final): 99
+2026-01-28 15:53:40,294 - STDOUT - INFO - Number of clients: 2
+2026-01-28 15:53:40,294 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'binary:logistic', 'eval_metric': 'auc'}
+2026-01-28 15:53:40,294 - STDOUT - INFO - ============================================================
+2026-01-28 15:53:40,294 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-28 15:53:40,294 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-28 15:53:40,294 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'binary:logistic', 'eval_metric': 'auc'}
+2026-01-28 15:53:40,294 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-28 15:53:40,294 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-28 15:53:40,299 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-28 15:53:40,299 - flwr - INFO - [INIT]
+2026-01-28 15:53:40,299 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-28 15:53:40,299 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-28 15:53:40,299 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-28 15:53:40,299 - flwr - INFO - 
+2026-01-28 15:53:40,299 - flwr - INFO - [ROUND 1]
+2026-01-28 15:53:47,650 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:53:47,668 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-28 15:53:47,668 - STDOUT - INFO - 
+2026-01-28 15:53:47,668 - STDOUT - INFO - [Round 1] Aggregating 2 client models...
+2026-01-28 15:53:47,816 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-28 15:53:47,816 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_examples': 2639.0, 'num_trees': 33.0}
+2026-01-28 15:53:47,817 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-28 15:53:47,817 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-28 15:53:47,832 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-28 15:53:47,832 - STDOUT - INFO - [Round 1] Evaluation - Loss: 0.0000, Metrics: {'auc': 1.0, 'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0}
+2026-01-28 15:53:47,832 - flwr - INFO - 
+2026-01-28 15:53:47,832 - flwr - INFO - [ROUND 2]
+2026-01-28 15:53:47,832 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:53:47,845 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-28 15:53:47,845 - STDOUT - INFO - 
+2026-01-28 15:53:47,845 - STDOUT - INFO - [Round 2] Aggregating 2 client models...
+2026-01-28 15:53:47,846 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-28 15:53:47,847 - STDOUT - INFO - [Round 2] Aggregation complete. Metrics: {'num_examples': 2639.0, 'num_trees': 66.0}
+2026-01-28 15:53:47,848 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_2.json
+2026-01-28 15:53:47,848 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-28 15:53:47,860 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-28 15:53:47,860 - STDOUT - INFO - [Round 2] Evaluation - Loss: 0.0000, Metrics: {'auc': 1.0, 'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0}
+2026-01-28 15:53:47,860 - flwr - INFO - 
+2026-01-28 15:53:47,860 - flwr - INFO - [ROUND 3]
+2026-01-28 15:53:47,860 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-28 15:53:47,875 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-28 15:53:47,875 - STDOUT - INFO - 
+2026-01-28 15:53:47,875 - STDOUT - INFO - [Round 3] Aggregating 2 client models...
+2026-01-28 15:53:47,877 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-28 15:53:47,877 - STDOUT - INFO - [Round 3] Aggregation complete. Metrics: {'num_examples': 2639.0, 'num_trees': 66.0}
+2026-01-28 15:53:47,878 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_3.json
+2026-01-28 15:53:47,878 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-28 15:53:47,894 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-28 15:53:47,895 - STDOUT - INFO - [Round 3] Evaluation - Loss: 0.0000, Metrics: {'auc': 1.0, 'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0}
+2026-01-28 15:53:47,895 - flwr - INFO - 
+2026-01-28 15:53:47,895 - flwr - INFO - [SUMMARY]
+2026-01-28 15:53:47,895 - flwr - INFO - Run finished 3 round(s) in 7.60s
+2026-01-28 15:53:47,895 - flwr - INFO - 	History (loss, distributed):
+2026-01-28 15:53:47,895 - flwr - INFO - 		round 1: 0.0
+2026-01-28 15:53:47,895 - flwr - INFO - 		round 2: 0.0
+2026-01-28 15:53:47,895 - flwr - INFO - 		round 3: 0.0
+2026-01-28 15:53:47,895 - flwr - INFO - 	History (metrics, distributed, fit):
+2026-01-28 15:53:47,895 - flwr - INFO - 	{'num_examples': [(1, 2639.0), (2, 2639.0), (3, 2639.0)],
+2026-01-28 15:53:47,895 - flwr - INFO - 	 'num_trees': [(1, 33.0), (2, 66.0), (3, 66.0)]}
+2026-01-28 15:53:47,895 - flwr - INFO - 	History (metrics, distributed, evaluate):
+2026-01-28 15:53:47,895 - flwr - INFO - 	{'accuracy': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2026-01-28 15:53:47,895 - flwr - INFO - 	 'auc': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2026-01-28 15:53:47,895 - flwr - INFO - 	 'precision': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2026-01-28 15:53:47,895 - flwr - INFO - 	 'recall': [(1, 1.0), (2, 1.0), (3, 1.0)]}
+2026-01-28 15:53:47,895 - flwr - INFO - 
+2026-01-28 15:53:47,897 - STDOUT - INFO - History (loss, distributed):
+2026-01-28 15:53:47,897 - STDOUT - INFO - 	round 1: 0.0
+2026-01-28 15:53:47,898 - STDOUT - INFO - 	round 2: 0.0
+2026-01-28 15:53:47,898 - STDOUT - INFO - 	round 3: 0.0
+2026-01-28 15:53:47,898 - STDOUT - INFO - History (metrics, distributed, fit):
+2026-01-28 15:53:47,898 - STDOUT - INFO - {'num_examples': [(1, 2639.0), (2, 2639.0), (3, 2639.0)],
+2026-01-28 15:53:47,899 - STDOUT - INFO -  'num_trees': [(1, 33.0), (2, 66.0), (3, 66.0)]}
+2026-01-28 15:53:47,899 - STDOUT - INFO - History (metrics, distributed, evaluate):
+2026-01-28 15:53:47,899 - STDOUT - INFO - {'accuracy': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2026-01-28 15:53:47,899 - STDOUT - INFO -  'auc': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2026-01-28 15:53:47,899 - STDOUT - INFO -  'precision': [(1, 1.0), (2, 1.0), (3, 1.0)],
+2026-01-28 15:53:47,899 - STDOUT - INFO -  'recall': [(1, 1.0), (2, 1.0), (3, 1.0)]}

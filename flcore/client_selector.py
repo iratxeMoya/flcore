@@ -8,6 +8,7 @@ import flcore.models.nn as nn
 import flcore.models.cox as cox
 import flcore.models.rsf as rsf
 import flcore.models.gbs as gbs
+import flcore.models.xgb_irh as xgb_irh
 
 def get_model_client(config, data, client_id):
     model = config["model"]
@@ -35,6 +36,9 @@ def get_model_client(config, data, client_id):
 
     elif model == "gbs":
         client = gbs.client.get_client(config, data, client_id)
+
+    elif model == "xgb_irh":
+        client = xgb_irh.client.get_client(config, data, client_id)
 
     else:
         raise ValueError(f"Unknown model: {model}")
