@@ -263,11 +263,13 @@ def get_server_and_strategy(config) -> Tuple[fl.server.Server, XGBoostStrategy]:
             - experiment_dir: Directory to save results
             - num_clients: Number of clients
             - num_rounds: Number of federated rounds
+            - task: Task type - 'binary', 'multiclass', or 'regression'
+            - n_out: Number of output classes (required for multiclass)
             - xgb: XGBoost-specific parameters
                 - tree_num: Number of trees per local training round
-                - task_type: 'BINARY' or 'MULTICLASS'
-                - num_classes: Number of classes (required for MULTICLASS)
                 - train_method: 'bagging' or 'cyclic'
+                - learning_rate: Learning rate (optional)
+                - max_depth: Max tree depth (optional)
     
     Returns:
         Tuple of (Server, Strategy)
@@ -275,16 +277,19 @@ def get_server_and_strategy(config) -> Tuple[fl.server.Server, XGBoostStrategy]:
     
     os.makedirs(f"{config['experiment_dir']}", exist_ok=True)
     
+    # Extract task type from config
+    task = config.get("task", "binary").lower()
+    
+    # Validate task type
+    valid_tasks = ["binary", "multiclass", "regression"]
+    if task not in valid_tasks:
+        print(f"WARNING: Invalid task '{task}', defaulting to 'binary'")
+        task = "binary"
+    
     # Extract XGBoost parameters
     xgb_config = config.get("xgb", {})
-    task_type = xgb_config.get("task_type", "BINARY").upper()
     
-    # Validate task_type
-    if task_type not in ["BINARY", "MULTICLASS"]:
-        print(f"WARNING: Invalid task_type '{task_type}', defaulting to BINARY")
-        task_type = "BINARY"
-    
-    # XGBoost hyperparameters
+    # Base XGBoost hyperparameters
     xgb_params = {
         "eta": xgb_config.get("learning_rate", 0.1),  # learning rate
         "max_depth": xgb_config.get("max_depth", 6),
@@ -294,23 +299,29 @@ def get_server_and_strategy(config) -> Tuple[fl.server.Server, XGBoostStrategy]:
     }
     
     # Configure objective and eval_metric based on task type
-    if task_type == "BINARY":
+    if task == "binary":
         xgb_params["objective"] = "binary:logistic"
         xgb_params["eval_metric"] = "auc"
         print(f"[XGBoost Config] Binary classification")
-    else:  # MULTICLASS
+        
+    elif task == "multiclass":
         xgb_params["objective"] = "multi:softmax"
         xgb_params["eval_metric"] = "mlogloss"
         
         # CRITICAL: num_class is REQUIRED for multiclass
-        num_classes = xgb_config.get("num_classes")
-        if num_classes is None or num_classes < 2:
+        n_out = config.get("n_out")
+        if n_out is None or n_out < 2:
             raise ValueError(
-                f"For MULTICLASS task, you MUST specify 'num_classes' >= 2 in xgb config. "
-                f"Got: {num_classes}. Example: --xgb '{{\"task_type\": \"MULTICLASS\", \"num_classes\": 3, ...}}'"
+                f"For MULTICLASS task, you MUST specify 'n_out' >= 2 in config. "
+                f"Got: {n_out}. This should be the number of classes in your dataset."
             )
-        xgb_params["num_class"] = num_classes
-        print(f"[XGBoost Config] Multiclass classification with {num_classes} classes")
+        xgb_params["num_class"] = n_out
+        print(f"[XGBoost Config] Multiclass classification with {n_out} classes")
+        
+    elif task == "regression":
+        xgb_params["objective"] = "reg:squarederror"  # or reg:squaredlogerror, reg:pseudohubererror
+        xgb_params["eval_metric"] = "rmse"  # Root Mean Squared Error
+        print(f"[XGBoost Config] Regression")
     
     # Training configuration
     train_method = xgb_config.get("train_method", "bagging")  # 'bagging' or 'cyclic'
@@ -319,7 +330,7 @@ def get_server_and_strategy(config) -> Tuple[fl.server.Server, XGBoostStrategy]:
     print(f"\n{'='*60}")
     print(f"XGBoost Federated Learning Configuration")
     print(f"{'='*60}")
-    print(f"Task type: {task_type}")
+    print(f"Task type: {task.upper()}")
     print(f"Training method: {train_method}")
     print(f"Total rounds: {config.get('num_rounds', 10)}")
     print(f"Trees per round: {num_local_rounds}")

@@ -44,6 +44,8 @@ if __name__ == "__main__":
     parser.add_argument("--target_label", type=str, nargs='+', default=None, help="Dataloader to use")
     parser.add_argument("--sandbox_path", type=str, default="./sandbox", help="Sandbox path to use")
     #parser.add_argument("--certs_path", type=str, default="./", help="Certificates path")
+    parser.add_argument("--task", type=str, default="binary", help="Task type (binary, multiclass, regression)")
+    parser.add_argument("--n_out", type=int, default=3, help="Number of classes")
 
     parser.add_argument("--smooth_method", type=str, default="EqualVoting", help="Weight smoothing")
     parser.add_argument("--smoothWeights", type=json.loads, default= {"smoothing_strenght": 0.5}, help="Smoothing parameters")

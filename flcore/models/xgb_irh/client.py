@@ -49,6 +49,7 @@ class XGBoostClient(fl.client.NumPyClient):
         self.xgb_params = {}
         self.dtrain = None
         self.dtest = None
+        self.label_encoder = None  # For categorical target encoding
         
         # Prepare data
         self._prepare_data()
@@ -63,6 +64,25 @@ class XGBoostClient(fl.client.NumPyClient):
         y_train = self.local_data['y_train']
         X_test = self.local_data['X_test']
         y_test = self.local_data['y_test']
+        
+        # Handle categorical labels (for multiclass classification)
+        # XGBoost requires numeric labels, not strings
+        if hasattr(y_train, 'dtype') and y_train.dtype == 'object':
+            print(f"[Client {self.client_id}] Detected categorical labels, encoding...")
+            from sklearn.preprocessing import LabelEncoder
+            
+            self.label_encoder = LabelEncoder()
+            y_train = self.label_encoder.fit_transform(y_train)
+            y_test = self.label_encoder.transform(y_test)
+            
+            # Update local_data with encoded labels
+            self.local_data['y_train'] = y_train
+            self.local_data['y_test'] = y_test
+            
+            print(f"[Client {self.client_id}] Label mapping: {dict(enumerate(self.label_encoder.classes_))}")
+            print(f"[Client {self.client_id}] Encoded labels - Train: {np.unique(y_train)}, Test: {np.unique(y_test)}")
+        else:
+            self.label_encoder = None
         
         # Create DMatrix objects
         self.dtrain = xgb.DMatrix(X_train, label=y_train)
@@ -256,19 +276,50 @@ class XGBoostClient(fl.client.NumPyClient):
         y_pred = self.bst.predict(self.dtest)
         y_true = self.local_data['y_test']
         
-        # Calculate additional metrics
-        if self.xgb_params.get("objective", "").startswith("binary"):
+        # Determine task type from objective
+        objective = self.xgb_params.get("objective", "")
+        
+        # Calculate additional metrics based on task type
+        if objective.startswith("binary"):
             # Binary classification
-            from sklearn.metrics import accuracy_score, precision_score, recall_score
+            from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
             
             y_pred_binary = (y_pred > 0.5).astype(int)
             metrics['accuracy'] = float(accuracy_score(y_true, y_pred_binary))
             metrics['precision'] = float(precision_score(y_true, y_pred_binary, zero_division=0))
             metrics['recall'] = float(recall_score(y_true, y_pred_binary, zero_division=0))
-        
-        # Loss is 1 - primary metric (e.g., 1 - AUC)
-        primary_metric = metrics.get('auc', metrics.get('mlogloss', 0))
-        loss = 1 - primary_metric if 'auc' in metrics else primary_metric
+            metrics['f1'] = float(f1_score(y_true, y_pred_binary, zero_division=0))
+            
+            # Loss is 1 - AUC for binary
+            primary_metric = metrics.get('auc', 0)
+            loss = 1 - primary_metric
+            
+        elif objective.startswith("multi"):
+            # Multiclass classification
+            from sklearn.metrics import accuracy_score, f1_score
+            
+            # y_pred is already the predicted class (not probabilities)
+            y_pred_class = y_pred.astype(int)
+            metrics['accuracy'] = float(accuracy_score(y_true, y_pred_class))
+            metrics['f1_macro'] = float(f1_score(y_true, y_pred_class, average='macro', zero_division=0))
+            metrics['f1_weighted'] = float(f1_score(y_true, y_pred_class, average='weighted', zero_division=0))
+            
+            # Loss is mlogloss (already calculated by XGBoost)
+            loss = metrics.get('mlogloss', 1.0)
+            
+        elif objective.startswith("reg"):
+            # Regression
+            from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+            
+            metrics['mse'] = float(mean_squared_error(y_true, y_pred))
+            metrics['mae'] = float(mean_absolute_error(y_true, y_pred))
+            metrics['r2'] = float(r2_score(y_true, y_pred))
+            
+            # Loss is RMSE (primary metric for regression)
+            loss = metrics.get('rmse', metrics['mse'] ** 0.5)
+        else:
+            # Unknown task, use default loss
+            loss = 1.0
         
         num_examples = len(self.local_data['X_test'])
         

@@ -166,3 +166,4 @@ cython_debug/
 #.idea/
 
 dataset/icrc-dataset/Untitled.ipynb
+dataset/test_study/3362-2045-1944/*.ipynb

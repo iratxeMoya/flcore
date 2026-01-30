@@ -1245,3 +1245,420 @@ than or equal to the values of `min_fit_clients` and `min_evaluate_clients`.
 2026-01-28 15:53:47,899 - STDOUT - INFO -  'auc': [(1, 1.0), (2, 1.0), (3, 1.0)],
 2026-01-28 15:53:47,899 - STDOUT - INFO -  'precision': [(1, 1.0), (2, 1.0), (3, 1.0)],
 2026-01-28 15:53:47,899 - STDOUT - INFO -  'recall': [(1, 1.0), (2, 1.0), (3, 1.0)]}
+2026-01-30 07:42:24,662 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-30 07:42:24,662 - root - DEBUG - Starting Flower server...
+2026-01-30 07:42:24,662 - STDOUT - INFO - ELSE
+2026-01-30 07:42:24,667 - STDOUT - INFO - [XGBoost Config] Regression
+2026-01-30 07:42:24,668 - STDOUT - INFO - 
+2026-01-30 07:42:24,668 - STDOUT - INFO - ============================================================
+2026-01-30 07:42:24,668 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-30 07:42:24,668 - STDOUT - INFO - ============================================================
+2026-01-30 07:42:24,668 - STDOUT - INFO - Task type: REGRESSION
+2026-01-30 07:42:24,668 - STDOUT - INFO - Training method: bagging
+2026-01-30 07:42:24,668 - STDOUT - INFO - Total rounds: 3
+2026-01-30 07:42:24,668 - STDOUT - INFO - Trees per round: 33
+2026-01-30 07:42:24,668 - STDOUT - INFO - Total trees (final): 99
+2026-01-30 07:42:24,668 - STDOUT - INFO - Number of clients: 2
+2026-01-30 07:42:24,668 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+2026-01-30 07:42:24,668 - STDOUT - INFO - ============================================================
+2026-01-30 07:42:24,668 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-30 07:42:24,668 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-30 07:42:24,668 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'reg:squarederror', 'eval_metric': 'rmse'}
+2026-01-30 07:42:24,668 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-30 07:42:24,669 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-30 07:42:24,674 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-30 07:42:24,674 - flwr - INFO - [INIT]
+2026-01-30 07:42:24,674 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-30 07:42:24,674 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-30 07:42:24,674 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-30 07:42:24,674 - flwr - INFO - 
+2026-01-30 07:42:24,674 - flwr - INFO - [ROUND 1]
+2026-01-30 08:58:03,033 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 08:58:03,114 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 08:58:03,114 - STDOUT - INFO - 
+2026-01-30 08:58:03,114 - STDOUT - INFO - [Round 1] Aggregating 2 client models...
+2026-01-30 08:58:03,291 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 08:58:03,294 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_trees': 33.0, 'num_examples': 2639.0}
+2026-01-30 08:58:03,302 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-30 08:58:03,303 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 08:58:03,323 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-30 08:58:03,323 - STDOUT - INFO - [Round 1] Evaluation - Loss: 0.4700, Metrics: {'r2': 0.060208744943564596, 'mae': 0.4061382217758303, 'rmse': 0.4699649796344495, 'mse': 0.2216560287434154}
+2026-01-30 08:58:03,323 - flwr - INFO - 
+2026-01-30 08:58:03,323 - flwr - INFO - [ROUND 2]
+2026-01-30 08:58:03,324 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 08:58:03,363 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 08:58:03,364 - STDOUT - INFO - 
+2026-01-30 08:58:03,364 - STDOUT - INFO - [Round 2] Aggregating 2 client models...
+2026-01-30 08:58:03,371 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 08:58:03,373 - STDOUT - INFO - [Round 2] Aggregation complete. Metrics: {'num_trees': 66.0, 'num_examples': 2639.0}
+2026-01-30 08:58:03,378 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_2.json
+2026-01-30 08:58:03,379 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 08:58:03,393 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-30 08:58:03,393 - STDOUT - INFO - [Round 2] Evaluation - Loss: 0.4692, Metrics: {'r2': 0.05919338228363069, 'rmse': 0.46922262744465537, 'mae': 0.4058881095159499, 'mse': 0.22080584841129633}
+2026-01-30 08:58:03,393 - flwr - INFO - 
+2026-01-30 08:58:03,394 - flwr - INFO - [ROUND 3]
+2026-01-30 08:58:03,394 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 08:58:03,437 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 08:58:03,438 - STDOUT - INFO - 
+2026-01-30 08:58:03,438 - STDOUT - INFO - [Round 3] Aggregating 2 client models...
+2026-01-30 08:58:03,444 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 08:58:03,445 - STDOUT - INFO - [Round 3] Aggregation complete. Metrics: {'num_trees': 66.0, 'num_examples': 2639.0}
+2026-01-30 08:58:03,450 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_3.json
+2026-01-30 08:58:03,450 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 08:58:03,464 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-30 08:58:03,464 - STDOUT - INFO - [Round 3] Evaluation - Loss: 0.4730, Metrics: {'r2': 0.04735945470847608, 'mae': 0.4084896552750554, 'rmse': 0.47295803304962114, 'mse': 0.22384652205200958}
+2026-01-30 08:58:03,464 - flwr - INFO - 
+2026-01-30 08:58:03,465 - flwr - INFO - [SUMMARY]
+2026-01-30 08:58:03,465 - flwr - INFO - Run finished 3 round(s) in 4538.79s
+2026-01-30 08:58:03,466 - flwr - INFO - 	History (loss, distributed):
+2026-01-30 08:58:03,466 - flwr - INFO - 		round 1: 0.46996498107910156
+2026-01-30 08:58:03,466 - flwr - INFO - 		round 2: 0.46922262012958527
+2026-01-30 08:58:03,466 - flwr - INFO - 		round 3: 0.4729580283164978
+2026-01-30 08:58:03,466 - flwr - INFO - 	History (metrics, distributed, fit):
+2026-01-30 08:58:03,466 - flwr - INFO - 	{'num_examples': [(1, 2639.0), (2, 2639.0), (3, 2639.0)],
+2026-01-30 08:58:03,466 - flwr - INFO - 	 'num_trees': [(1, 33.0), (2, 66.0), (3, 66.0)]}
+2026-01-30 08:58:03,466 - flwr - INFO - 	History (metrics, distributed, evaluate):
+2026-01-30 08:58:03,466 - flwr - INFO - 	{'mae': [(1, 0.4061382217758303),
+2026-01-30 08:58:03,466 - flwr - INFO - 	         (2, 0.4058881095159499),
+2026-01-30 08:58:03,466 - flwr - INFO - 	         (3, 0.4084896552750554)],
+2026-01-30 08:58:03,466 - flwr - INFO - 	 'mse': [(1, 0.2216560287434154),
+2026-01-30 08:58:03,467 - flwr - INFO - 	         (2, 0.22080584841129633),
+2026-01-30 08:58:03,467 - flwr - INFO - 	         (3, 0.22384652205200958)],
+2026-01-30 08:58:03,467 - flwr - INFO - 	 'r2': [(1, 0.060208744943564596),
+2026-01-30 08:58:03,467 - flwr - INFO - 	        (2, 0.05919338228363069),
+2026-01-30 08:58:03,467 - flwr - INFO - 	        (3, 0.04735945470847608)],
+2026-01-30 08:58:03,467 - flwr - INFO - 	 'rmse': [(1, 0.4699649796344495),
+2026-01-30 08:58:03,467 - flwr - INFO - 	          (2, 0.46922262744465537),
+2026-01-30 08:58:03,467 - flwr - INFO - 	          (3, 0.47295803304962114)]}
+2026-01-30 08:58:03,467 - flwr - INFO - 
+2026-01-30 08:58:03,470 - STDOUT - INFO - History (loss, distributed):
+2026-01-30 08:58:03,471 - STDOUT - INFO - 	round 1: 0.46996498107910156
+2026-01-30 08:58:03,472 - STDOUT - INFO - 	round 2: 0.46922262012958527
+2026-01-30 08:58:03,472 - STDOUT - INFO - 	round 3: 0.4729580283164978
+2026-01-30 08:58:03,473 - STDOUT - INFO - History (metrics, distributed, fit):
+2026-01-30 08:58:03,473 - STDOUT - INFO - {'num_examples': [(1, 2639.0), (2, 2639.0), (3, 2639.0)],
+2026-01-30 08:58:03,473 - STDOUT - INFO -  'num_trees': [(1, 33.0), (2, 66.0), (3, 66.0)]}
+2026-01-30 08:58:03,473 - STDOUT - INFO - History (metrics, distributed, evaluate):
+2026-01-30 08:58:03,473 - STDOUT - INFO - {'mae': [(1, 0.4061382217758303),
+2026-01-30 08:58:03,473 - STDOUT - INFO -          (2, 0.4058881095159499),
+2026-01-30 08:58:03,473 - STDOUT - INFO -          (3, 0.4084896552750554)],
+2026-01-30 08:58:03,473 - STDOUT - INFO -  'mse': [(1, 0.2216560287434154),
+2026-01-30 08:58:03,473 - STDOUT - INFO -          (2, 0.22080584841129633),
+2026-01-30 08:58:03,473 - STDOUT - INFO -          (3, 0.22384652205200958)],
+2026-01-30 08:58:03,473 - STDOUT - INFO -  'r2': [(1, 0.060208744943564596),
+2026-01-30 08:58:03,473 - STDOUT - INFO -         (2, 0.05919338228363069),
+2026-01-30 08:58:03,473 - STDOUT - INFO -         (3, 0.04735945470847608)],
+2026-01-30 08:58:03,474 - STDOUT - INFO -  'rmse': [(1, 0.4699649796344495),
+2026-01-30 08:58:03,474 - STDOUT - INFO -           (2, 0.46922262744465537),
+2026-01-30 08:58:03,474 - STDOUT - INFO -           (3, 0.47295803304962114)]}
+2026-01-30 09:01:59,947 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-30 09:01:59,947 - root - DEBUG - Starting Flower server...
+2026-01-30 09:01:59,947 - STDOUT - INFO - ELSE
+2026-01-30 09:01:59,951 - STDOUT - INFO - [XGBoost Config] Multiclass classification with 3 classes
+2026-01-30 09:01:59,951 - STDOUT - INFO - 
+2026-01-30 09:01:59,951 - STDOUT - INFO - ============================================================
+2026-01-30 09:01:59,951 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-30 09:01:59,952 - STDOUT - INFO - ============================================================
+2026-01-30 09:01:59,952 - STDOUT - INFO - Task type: MULTICLASS
+2026-01-30 09:01:59,952 - STDOUT - INFO - Training method: bagging
+2026-01-30 09:01:59,952 - STDOUT - INFO - Total rounds: 3
+2026-01-30 09:01:59,952 - STDOUT - INFO - Trees per round: 33
+2026-01-30 09:01:59,952 - STDOUT - INFO - Total trees (final): 99
+2026-01-30 09:01:59,952 - STDOUT - INFO - Number of clients: 2
+2026-01-30 09:01:59,952 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 09:01:59,952 - STDOUT - INFO - ============================================================
+2026-01-30 09:01:59,952 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-30 09:01:59,952 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-30 09:01:59,952 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 09:01:59,952 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-30 09:01:59,953 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-30 09:01:59,959 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-30 09:01:59,959 - flwr - INFO - [INIT]
+2026-01-30 09:01:59,960 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-30 09:01:59,960 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-30 09:01:59,960 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-30 09:01:59,960 - flwr - INFO - 
+2026-01-30 09:01:59,960 - flwr - INFO - [ROUND 1]
+2026-01-30 13:47:45,897 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 13:47:45,998 - flwr - INFO - aggregate_fit: received 1 results and 1 failures
+2026-01-30 13:47:45,999 - STDOUT - INFO - 
+2026-01-30 13:47:45,999 - STDOUT - INFO - [Round 1] Aggregating 1 client models...
+2026-01-30 13:47:46,182 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_trees': 33.0, 'num_examples': 2639.0}
+2026-01-30 13:47:46,193 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-30 13:47:48,103 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 13:47:48,135 - flwr - INFO - aggregate_evaluate: received 0 results and 2 failures
+2026-01-30 13:47:48,135 - flwr - INFO - 
+2026-01-30 13:47:48,135 - flwr - INFO - [ROUND 2]
+2026-01-30 13:47:50,311 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 13:47:50,385 - flwr - INFO - aggregate_fit: received 1 results and 1 failures
+2026-01-30 13:47:50,385 - STDOUT - INFO - 
+2026-01-30 13:47:50,385 - STDOUT - INFO - [Round 2] Aggregating 1 client models...
+2026-01-30 13:47:50,400 - STDOUT - INFO - [Round 2] Aggregation complete. Metrics: {'num_trees': 66.0, 'num_examples': 2639.0}
+2026-01-30 13:47:50,417 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_2.json
+2026-01-30 18:44:04,216 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-30 18:44:04,216 - root - DEBUG - Starting Flower server...
+2026-01-30 18:44:04,216 - STDOUT - INFO - ELSE
+2026-01-30 18:44:04,220 - STDOUT - INFO - [XGBoost Config] Multiclass classification with 3 classes
+2026-01-30 18:44:04,220 - STDOUT - INFO - 
+2026-01-30 18:44:04,220 - STDOUT - INFO - ============================================================
+2026-01-30 18:44:04,220 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-30 18:44:04,220 - STDOUT - INFO - ============================================================
+2026-01-30 18:44:04,220 - STDOUT - INFO - Task type: MULTICLASS
+2026-01-30 18:44:04,220 - STDOUT - INFO - Training method: bagging
+2026-01-30 18:44:04,220 - STDOUT - INFO - Total rounds: 3
+2026-01-30 18:44:04,220 - STDOUT - INFO - Trees per round: 33
+2026-01-30 18:44:04,220 - STDOUT - INFO - Total trees (final): 99
+2026-01-30 18:44:04,220 - STDOUT - INFO - Number of clients: 2
+2026-01-30 18:44:04,220 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 18:44:04,220 - STDOUT - INFO - ============================================================
+2026-01-30 18:44:04,220 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-30 18:44:04,220 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-30 18:44:04,220 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 18:44:04,220 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-30 18:44:04,221 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-30 18:44:04,226 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-30 18:44:04,226 - flwr - INFO - [INIT]
+2026-01-30 18:44:04,226 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-30 18:44:04,227 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-30 18:44:04,227 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-30 18:44:04,227 - flwr - INFO - 
+2026-01-30 18:44:04,227 - flwr - INFO - [ROUND 1]
+2026-01-30 18:44:14,844 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:44:14,903 - flwr - INFO - aggregate_fit: received 1 results and 1 failures
+2026-01-30 18:44:14,903 - STDOUT - INFO - 
+2026-01-30 18:44:14,903 - STDOUT - INFO - [Round 1] Aggregating 1 client models...
+2026-01-30 18:44:15,086 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_trees': 33.0, 'num_examples': 2639.0}
+2026-01-30 18:44:15,096 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-30 18:44:17,052 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 18:44:17,087 - flwr - INFO - aggregate_evaluate: received 1 results and 1 failures
+2026-01-30 18:44:17,087 - STDOUT - INFO - [Round 1] Evaluation - Loss: 1.1213, Metrics: {'f1_macro': 0.33723689216563324, 'accuracy': 0.3378787878787879, 'f1_weighted': 0.3376158670020687, 'mlogloss': 1.1213470977364164}
+2026-01-30 18:44:17,088 - flwr - INFO - 
+2026-01-30 18:44:17,088 - flwr - INFO - [ROUND 2]
+2026-01-30 18:44:19,259 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:44:19,336 - flwr - INFO - aggregate_fit: received 1 results and 1 failures
+2026-01-30 18:44:19,336 - STDOUT - INFO - 
+2026-01-30 18:44:19,337 - STDOUT - INFO - [Round 2] Aggregating 1 client models...
+2026-01-30 18:44:19,351 - STDOUT - INFO - [Round 2] Aggregation complete. Metrics: {'num_trees': 66.0, 'num_examples': 2639.0}
+2026-01-30 18:44:19,366 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_2.json
+2026-01-30 18:47:13,165 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-30 18:47:13,165 - root - DEBUG - Starting Flower server...
+2026-01-30 18:47:13,165 - STDOUT - INFO - ELSE
+2026-01-30 18:47:13,169 - STDOUT - INFO - [XGBoost Config] Multiclass classification with 3 classes
+2026-01-30 18:47:13,169 - STDOUT - INFO - 
+2026-01-30 18:47:13,169 - STDOUT - INFO - ============================================================
+2026-01-30 18:47:13,169 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-30 18:47:13,169 - STDOUT - INFO - ============================================================
+2026-01-30 18:47:13,169 - STDOUT - INFO - Task type: MULTICLASS
+2026-01-30 18:47:13,169 - STDOUT - INFO - Training method: bagging
+2026-01-30 18:47:13,169 - STDOUT - INFO - Total rounds: 3
+2026-01-30 18:47:13,169 - STDOUT - INFO - Trees per round: 33
+2026-01-30 18:47:13,169 - STDOUT - INFO - Total trees (final): 99
+2026-01-30 18:47:13,169 - STDOUT - INFO - Number of clients: 2
+2026-01-30 18:47:13,169 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 18:47:13,169 - STDOUT - INFO - ============================================================
+2026-01-30 18:47:13,169 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-30 18:47:13,170 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-30 18:47:13,170 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 18:47:13,170 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-30 18:47:13,170 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-30 18:47:13,177 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-30 18:47:13,177 - flwr - INFO - [INIT]
+2026-01-30 18:47:13,177 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-30 18:47:13,177 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-30 18:47:13,177 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-30 18:47:13,177 - flwr - INFO - 
+2026-01-30 18:47:13,177 - flwr - INFO - [ROUND 1]
+2026-01-30 18:47:35,289 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:47:35,349 - flwr - INFO - aggregate_fit: received 1 results and 1 failures
+2026-01-30 18:47:35,349 - STDOUT - INFO - 
+2026-01-30 18:47:35,349 - STDOUT - INFO - [Round 1] Aggregating 1 client models...
+2026-01-30 18:47:35,527 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_examples': 2639.0, 'num_trees': 33.0}
+2026-01-30 18:47:35,536 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-30 18:47:37,498 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 18:47:37,526 - flwr - INFO - aggregate_evaluate: received 1 results and 1 failures
+2026-01-30 18:47:37,526 - STDOUT - INFO - [Round 1] Evaluation - Loss: 1.1119, Metrics: {'f1_weighted': 0.34126815067792393, 'f1_macro': 0.34193118690809216, 'accuracy': 0.34393939393939393, 'mlogloss': 1.1118758137478972}
+2026-01-30 18:47:37,526 - flwr - INFO - 
+2026-01-30 18:47:37,527 - flwr - INFO - [ROUND 2]
+2026-01-30 18:47:39,704 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:47:39,807 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 18:47:39,807 - STDOUT - INFO - 
+2026-01-30 18:47:39,807 - STDOUT - INFO - [Round 2] Aggregating 2 client models...
+2026-01-30 18:47:39,821 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 18:47:39,823 - STDOUT - INFO - [Round 2] Aggregation complete. Metrics: {'num_examples': 2639.0, 'num_trees': 66.0}
+2026-01-30 18:47:39,829 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_2.json
+2026-01-30 18:47:39,829 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 18:47:39,845 - flwr - INFO - aggregate_evaluate: received 1 results and 1 failures
+2026-01-30 18:47:39,845 - STDOUT - INFO - [Round 2] Evaluation - Loss: 1.2718, Metrics: {'f1_weighted': 0.16799435902727614, 'f1_macro': 0.1672342035565645, 'accuracy': 0.33484848484848484, 'mlogloss': 1.2718279523379874}
+2026-01-30 18:47:39,845 - flwr - INFO - 
+2026-01-30 18:47:39,845 - flwr - INFO - [ROUND 3]
+2026-01-30 18:52:43,511 - root - DEBUG - This will be logged to both the console and the file.
+2026-01-30 18:52:43,511 - root - DEBUG - Starting Flower server...
+2026-01-30 18:52:43,511 - STDOUT - INFO - ELSE
+2026-01-30 18:52:43,514 - STDOUT - INFO - [XGBoost Config] Multiclass classification with 3 classes
+2026-01-30 18:52:43,514 - STDOUT - INFO - 
+2026-01-30 18:52:43,514 - STDOUT - INFO - ============================================================
+2026-01-30 18:52:43,515 - STDOUT - INFO - XGBoost Federated Learning Configuration
+2026-01-30 18:52:43,515 - STDOUT - INFO - ============================================================
+2026-01-30 18:52:43,515 - STDOUT - INFO - Task type: MULTICLASS
+2026-01-30 18:52:43,515 - STDOUT - INFO - Training method: bagging
+2026-01-30 18:52:43,515 - STDOUT - INFO - Total rounds: 3
+2026-01-30 18:52:43,515 - STDOUT - INFO - Trees per round: 33
+2026-01-30 18:52:43,515 - STDOUT - INFO - Total trees (final): 99
+2026-01-30 18:52:43,515 - STDOUT - INFO - Number of clients: 2
+2026-01-30 18:52:43,515 - STDOUT - INFO - XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 18:52:43,515 - STDOUT - INFO - ============================================================
+2026-01-30 18:52:43,515 - STDOUT - INFO - [XGBoost Strategy] Initialized with method: bagging
+2026-01-30 18:52:43,515 - STDOUT - INFO - [XGBoost Strategy] Local rounds per client: 33
+2026-01-30 18:52:43,515 - STDOUT - INFO - [XGBoost Strategy] XGBoost params: {'eta': 0.1, 'max_depth': 6, 'tree_method': 'hist', 'subsample': 0.8, 'colsample_bytree': 0.8, 'objective': 'multi:softmax', 'eval_metric': 'mlogloss', 'num_class': 3}
+2026-01-30 18:52:43,515 - flwr - WARNING - DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+2026-01-30 18:52:43,516 - flwr - INFO - Starting Flower server, config: num_rounds=3, no round_timeout
+2026-01-30 18:52:43,521 - flwr - INFO - Flower ECE: gRPC server running (3 rounds), SSL is disabled
+2026-01-30 18:52:43,521 - flwr - INFO - [INIT]
+2026-01-30 18:52:43,521 - flwr - INFO - Using initial global parameters provided by strategy
+2026-01-30 18:52:43,521 - flwr - INFO - Starting evaluation of initial global parameters
+2026-01-30 18:52:43,521 - flwr - INFO - Evaluation returned no results (`None`)
+2026-01-30 18:52:43,521 - flwr - INFO - 
+2026-01-30 18:52:43,521 - flwr - INFO - [ROUND 1]
+2026-01-30 18:53:02,689 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:53:02,777 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 18:53:02,777 - STDOUT - INFO - 
+2026-01-30 18:53:02,777 - STDOUT - INFO - [Round 1] Aggregating 2 client models...
+2026-01-30 18:53:02,943 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 18:53:02,968 - STDOUT - INFO - [Round 1] Aggregation complete. Metrics: {'num_trees': 33.0, 'num_examples': 2639.0}
+2026-01-30 18:53:02,980 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_1.json
+2026-01-30 18:53:02,980 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 18:53:03,000 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-30 18:53:03,001 - STDOUT - INFO - [Round 1] Evaluation - Loss: 1.0710, Metrics: {'f1_macro': 0.43760520710336404, 'mlogloss': 1.0709797717630862, 'f1_weighted': 0.4376545170817823, 'accuracy': 0.43787878787878787}
+2026-01-30 18:53:03,001 - flwr - INFO - 
+2026-01-30 18:53:03,001 - flwr - INFO - [ROUND 2]
+2026-01-30 18:53:03,001 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:53:03,063 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 18:53:03,064 - STDOUT - INFO - 
+2026-01-30 18:53:03,064 - STDOUT - INFO - [Round 2] Aggregating 2 client models...
+2026-01-30 18:53:03,080 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 18:53:03,083 - STDOUT - INFO - [Round 2] Aggregation complete. Metrics: {'num_trees': 66.0, 'num_examples': 2639.0}
+2026-01-30 18:53:03,092 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_2.json
+2026-01-30 18:53:03,092 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 18:53:03,108 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-30 18:53:03,108 - STDOUT - INFO - [Round 2] Evaluation - Loss: 1.0633, Metrics: {'f1_macro': 0.4592249097056985, 'mlogloss': 1.0633037347459433, 'f1_weighted': 0.45967500576591247, 'accuracy': 0.46060606060606063}
+2026-01-30 18:53:03,108 - flwr - INFO - 
+2026-01-30 18:53:03,108 - flwr - INFO - [ROUND 3]
+2026-01-30 18:53:03,109 - flwr - INFO - configure_fit: strategy sampled 2 clients (out of 2)
+2026-01-30 18:53:03,178 - flwr - INFO - aggregate_fit: received 2 results and 0 failures
+2026-01-30 18:53:03,178 - STDOUT - INFO - 
+2026-01-30 18:53:03,178 - STDOUT - INFO - [Round 3] Aggregating 2 client models...
+2026-01-30 18:53:03,194 - STDOUT - INFO - [Bagging] Adding trees from client 2
+2026-01-30 18:53:03,198 - STDOUT - INFO - [Round 3] Aggregation complete. Metrics: {'num_trees': 66.0, 'num_examples': 2639.0}
+2026-01-30 18:53:03,210 - STDOUT - INFO - [Checkpoint] Saved model to logs/experiment_xgb/checkpoints/xgboost_round_3.json
+2026-01-30 18:53:03,210 - flwr - INFO - configure_evaluate: strategy sampled 2 clients (out of 2)
+2026-01-30 18:53:03,228 - flwr - INFO - aggregate_evaluate: received 2 results and 0 failures
+2026-01-30 18:53:03,228 - STDOUT - INFO - [Round 3] Evaluation - Loss: 1.0788, Metrics: {'f1_macro': 0.4390163719662244, 'mlogloss': 1.0787706684659828, 'f1_weighted': 0.43931227049812005, 'accuracy': 0.43863636363636366}
+2026-01-30 18:53:03,228 - flwr - INFO - 
+2026-01-30 18:53:03,228 - flwr - INFO - [SUMMARY]
+2026-01-30 18:53:03,228 - flwr - INFO - Run finished 3 round(s) in 19.71s
+2026-01-30 18:53:03,229 - flwr - INFO - 	History (loss, distributed):
+2026-01-30 18:53:03,229 - flwr - INFO - 		round 1: 1.0709797739982605
+2026-01-30 18:53:03,229 - flwr - INFO - 		round 2: 1.0633037388324738
+2026-01-30 18:53:03,229 - flwr - INFO - 		round 3: 1.0787706971168518
+2026-01-30 18:53:03,229 - flwr - INFO - 	History (metrics, distributed, fit):
+2026-01-30 18:53:03,229 - flwr - INFO - 	{'num_examples': [(1, 2639.0), (2, 2639.0), (3, 2639.0)],
+2026-01-30 18:53:03,229 - flwr - INFO - 	 'num_trees': [(1, 33.0), (2, 66.0), (3, 66.0)]}
+2026-01-30 18:53:03,229 - flwr - INFO - 	History (metrics, distributed, evaluate):
+2026-01-30 18:53:03,229 - flwr - INFO - 	{'accuracy': [(1, 0.43787878787878787),
+2026-01-30 18:53:03,229 - flwr - INFO - 	              (2, 0.46060606060606063),
+2026-01-30 18:53:03,229 - flwr - INFO - 	              (3, 0.43863636363636366)],
+2026-01-30 18:53:03,229 - flwr - INFO - 	 'f1_macro': [(1, 0.43760520710336404),
+2026-01-30 18:53:03,229 - flwr - INFO - 	              (2, 0.4592249097056985),
+2026-01-30 18:53:03,229 - flwr - INFO - 	              (3, 0.4390163719662244)],
+2026-01-30 18:53:03,229 - flwr - INFO - 	 'f1_weighted': [(1, 0.4376545170817823),
+2026-01-30 18:53:03,229 - flwr - INFO - 	                 (2, 0.45967500576591247),
+2026-01-30 18:53:03,229 - flwr - INFO - 	                 (3, 0.43931227049812005)],
+2026-01-30 18:53:03,229 - flwr - INFO - 	 'mlogloss': [(1, 1.0709797717630862),
+2026-01-30 18:53:03,229 - flwr - INFO - 	              (2, 1.0633037347459433),
+2026-01-30 18:53:03,229 - flwr - INFO - 	              (3, 1.0787706684659828)]}
+2026-01-30 18:53:03,229 - flwr - INFO - 
+2026-01-30 18:53:03,231 - STDOUT - INFO - History (loss, distributed):
+2026-01-30 18:53:03,231 - STDOUT - INFO - 	round 1: 1.0709797739982605
+2026-01-30 18:53:03,231 - STDOUT - INFO - 	round 2: 1.0633037388324738
+2026-01-30 18:53:03,233 - STDOUT - INFO - 	round 3: 1.0787706971168518
+2026-01-30 18:53:03,233 - STDOUT - INFO - History (metrics, distributed, fit):
+2026-01-30 18:53:03,233 - STDOUT - INFO - {'num_examples': [(1, 2639.0), (2, 2639.0), (3, 2639.0)],
+2026-01-30 18:53:03,233 - STDOUT - INFO -  'num_trees': [(1, 33.0), (2, 66.0), (3, 66.0)]}
+2026-01-30 18:53:03,233 - STDOUT - INFO - History (metrics, distributed, evaluate):
+2026-01-30 18:53:03,233 - STDOUT - INFO - {'accuracy': [(1, 0.43787878787878787),
+2026-01-30 18:53:03,233 - STDOUT - INFO -               (2, 0.46060606060606063),
+2026-01-30 18:53:03,233 - STDOUT - INFO -               (3, 0.43863636363636366)],
+2026-01-30 18:53:03,233 - STDOUT - INFO -  'f1_macro': [(1, 0.43760520710336404),
+2026-01-30 18:53:03,233 - STDOUT - INFO -               (2, 0.4592249097056985),
+2026-01-30 18:53:03,233 - STDOUT - INFO -               (3, 0.4390163719662244)],
+2026-01-30 18:53:03,233 - STDOUT - INFO -  'f1_weighted': [(1, 0.4376545170817823),
+2026-01-30 18:53:03,233 - STDOUT - INFO -                  (2, 0.45967500576591247),
+2026-01-30 18:53:03,233 - STDOUT - INFO -                  (3, 0.43931227049812005)],
+2026-01-30 18:53:03,233 - STDOUT - INFO -  'mlogloss': [(1, 1.0709797717630862),
+2026-01-30 18:53:03,233 - STDOUT - INFO -               (2, 1.0633037347459433),
+2026-01-30 18:53:03,233 - STDOUT - INFO -               (3, 1.0787706684659828)]}
